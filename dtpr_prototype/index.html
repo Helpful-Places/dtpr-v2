@@ -98,6 +98,18 @@
       gtag('config', 'UA-173285185-1');
     </script>
 
+    <!-- Google Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-173285185-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+    <!-- End Google Analytics -->
+
 
     <style>
       html > body {
@@ -304,7 +316,7 @@
       }
       .dtpr-feedback-button {
         padding: 12px 24px;
-;
+
       }
       .feedback-negative {
         background-color: #f5ccdd;
@@ -743,6 +755,39 @@
           $("#aframe-header").hide();
         });
 
+        /* Send button clicks to G Analytics*/
+        $(".feedback-negative").click(function () {
+          ga('send', {
+            hitType: 'event',
+            eventCategory: 'neg-button',
+            eventAction: 'clicked'
+          });
+        });
+        $(".feedback-meh").click(function () {
+          ga('send', {
+            hitType: 'event',
+            eventCategory: 'meh-button',
+            eventAction: 'clicked'
+          });
+        });
+        $(".feedback-positive").click(function () {
+          ga('send', {
+            hitType: 'event',
+            eventCategory: 'pos-button',
+            eventAction: 'clicked'
+          });
+        });
+
+        /*
+        $(".dtpr-send-button").click(function () {
+          ga('send', {
+            hitType: 'event',
+            eventCategory: 'send-button',
+            eventAction: 'clicked'
+          });
+        });
+        */
+       
         /*
         $(".feedback-negative").click(function () {
           mailtoFeedback("critical");
@@ -976,8 +1021,18 @@
               <span>Say more about why…</span>
               <i class="material-icons">send</i>
               -->
-              <a class="typeform-share button" href="https://form.typeform.com/to/FrHmnice" data-mode="drawer_left" style="text-align:center; word-wrap: normal;" target="_blank">Please tell us more with this short survey</a> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
+              <a class="typeform-share button" href="https://form.typeform.com/to/FrHmnice" data-mode="drawer_left" style="text-align:center; word-wrap: normal;" target="_blank">Please tell us more with this short survey</a> 
+              <script> (function() { 
+              ga('send', {
+                hitType: 'event',
+                eventCategory: 'typeformsurvey',
+                eventAction: 'clicked'
+                });
+
+              var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
             </button>
+
+
           
             <!-- boston specific input form (embedded v2) -->
            <!-- <a class="typeform-share button" href="https://form.typeform.com/to/FrHmnice" data-mode="drawer_left" style="display:inline-block;text-decoration:none;background-color:#3A7685;color:white;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:16px;line-height:50px;text-align:center;border:10;border-radius: 28px;height:50px;padding:5px 33px;border-radius:25px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:bold;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;" target="_blank">Please tell us more by filling out a short survey</a> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>-->
