@@ -1,13 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
-    <title>dtpr_icons / purpose / ic_white / connectivity</title>
-    <desc>Created with Sketch.</desc>
-    <g id="dtpr_icons-/-purpose-/-ic_white-/-connectivity" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <rect id="Container" x="0" y="0" width="24" height="24"></rect>
-        <g id="24px-(30)">
-            <polygon id="Path" points="0 0 24 0 24 24 0 24"></polygon>
-            <path d="M1,9 L3,11 C7.97,6.03 16.03,6.03 21,11 L23,9 C16.93,2.93 7.08,2.93 1,9 Z M9,17 L12,20 L15,17 C13.35,15.34 10.66,15.34 9,17 Z M5,13 L7,15 C9.76,12.24 14.24,12.24 17,15 L19,13 C15.14,9.14 8.87,9.14 5,13 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
-        </g>
-    </g>
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="24" height="24" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M1 9.00001L3 11C7.97 6.03001 16.03 6.03001 21 11L23 9.00001C16.93 2.93001 7.08 2.93001 1 9.00001ZM9 17L12 20L15 17C13.35 15.34 10.66 15.34 9 17ZM7 15L5 13C8.87 9.14001 15.14 9.14001 19 13L17 15C14.24 12.24 9.76 12.24 7 15Z" fill="white"/>
 </svg>

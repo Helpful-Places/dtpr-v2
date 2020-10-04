@@ -1,26 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 54 (76480) - https://sketchapp.com -->
-    <title>dtpr_icons / purpose / white / water</title>
-    <desc>Created with Sketch.</desc>
-    <defs>
-        <polygon id="path-1" points="0.0004 0 13.5074 0 13.5074 17.9999 0.0004 17.9999"></polygon>
-    </defs>
-    <g id="dtpr_icons-/-purpose-/-white-/-water" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="dtpr_icons-/-container-/-hexagon" stroke="#000000">
-            <g id="Group-6" transform="translate(4.000000, 2.000000)">
-                <path d="M29,23.3623473 C29,24.1747401 28.5668669,24.9262388 27.8637022,25.3327062 L15.1374487,32.6944323 C14.4338084,33.1018559 13.5661916,33.1018559 12.8629306,32.6946518 L0.135278613,25.332498 C-0.56726465,24.9257096 -1,24.1743377 -1,23.3623473 L-1,8.63781792 C-1,7.82533466 -0.567409549,7.07453951 0.13562416,6.66746721 L12.8636403,-0.695557449 C13.5667275,-1.10148085 14.4332725,-1.10148085 15.1371226,-0.695116592 L27.863434,6.66730391 C28.5670118,7.07401009 29,7.82493224 29,8.63781792 L29,23.3623473 Z" id="Stroke-26" stroke-width="2"></path>
-            </g>
-        </g>
-        <g id="dtpr_icons-/-purpose-/-ic_black-/-water" transform="translate(6.000000, 6.000000)">
-            <rect id="Container" x="0" y="0" width="24" height="24"></rect>
-            <g id="Group-3" stroke-width="1" fill-rule="evenodd" transform="translate(5.000000, 3.000000)">
-                <mask id="mask-2" fill="white">
-                    <use xlink:href="#path-1"></use>
-                </mask>
-                <g id="Clip-2"></g>
-                <path d="M6.5024,0.0869 C6.2364,0.3269 0.0004,6.0269 0.0004,11.2459 C0.0004,14.9699 3.0294,17.9999 6.7534,17.9999 C10.4784,17.9999 13.5074,14.9699 13.5074,11.2459 C13.5074,6.0269 7.2714,0.3269 7.0054,0.0869 C6.8574,-0.0291 6.6494,-0.0291 6.5024,0.0869" id="Fill-1" fill="#000000" mask="url(#mask-2)"></path>
-            </g>
-        </g>
-    </g>
+<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M19.1371 1.30488L19.1364 1.30444C18.4333 0.898519 17.5667 0.898519 16.8636 1.30444L16.8629 1.30487L4.13562 8.66747L4.13528 8.66767C3.43246 9.07461 3 9.82548 3 10.6378V25.3623C3 26.1737 3.43221 26.9254 4.13528 27.3325L4.13566 27.3327L16.8626 34.6944C17.5662 35.1019 18.4338 35.1019 19.1374 34.6944L31.8634 27.3329C31.8635 27.3328 31.8636 27.3328 31.8637 27.3327C32.5677 26.9256 33 26.1738 33 25.3623V10.6378C33 9.8254 32.5674 9.0744 31.8637 8.66748C31.8636 8.66742 31.8635 8.66736 31.8634 8.6673L19.1371 1.30488Z" stroke="black" stroke-width="2"/>
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="11" y="9" width="14" height="18">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M11.0004 9H24.5074V26.9999H11.0004V9Z" fill="white"/>
+</mask>
+<g mask="url(#mask0)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M17.5024 9.08688C17.2364 9.32688 11.0004 15.0269 11.0004 20.2459C11.0004 23.9699 14.0294 26.9999 17.7534 26.9999C21.4784 26.9999 24.5074 23.9699 24.5074 20.2459C24.5074 15.0269 18.2714 9.32688 18.0054 9.08688C17.8574 8.97088 17.6494 8.97088 17.5024 9.08688Z" fill="black"/>
+</g>
 </svg>

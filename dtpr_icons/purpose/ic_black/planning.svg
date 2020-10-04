@@ -1,30 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 54 (76480) - https://sketchapp.com -->
-    <title>dtpr_icons / purpose / ic_black / planning</title>
-    <desc>Created with Sketch.</desc>
-    <defs>
-        <polygon id="path-1" points="0 0.0515 16.9484497 0.0515 16.9484497 16.9995 0 16.9995"></polygon>
-        <polygon id="path-3" points="0.8816 0.8292 10.915 0.8292 10.915 10.861642 0.8816 10.861642"></polygon>
-    </defs>
-    <g id="dtpr_icons-/-purpose-/-ic_black-/-planning" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <rect id="Container" x="0" y="0" width="24" height="24"></rect>
-        <g id="Group-9" transform="translate(3.000000, 3.000000)">
-            <g id="Group-3" transform="translate(0.000000, 0.757200)">
-                <mask id="mask-2" fill="white">
-                    <use xlink:href="#path-1"></use>
-                </mask>
-                <g id="Clip-2"></g>
-                <path d="M1.0059,0.0515 C0.4929,0.0515 -0.0001,0.4495 -0.0001,1.0515 L-0.0001,16.0015 C-0.0001,16.5525 0.4469,16.9995 0.9989,16.9995 L15.9479,16.9995 C16.8379,16.9995 17.2829,15.9245 16.6539,15.2955 L1.7049,0.3455 C1.5019,0.1425 1.2519,0.0515 1.0059,0.0515 M3.4949,7.0795 L9.9209,13.5045 L3.4949,13.5045 L3.4949,7.0795" id="Fill-1" fill="#000000" mask="url(#mask-2)"></path>
-            </g>
-            <g id="Group-6" transform="translate(7.000000, 0.757200)">
-                <mask id="mask-4" fill="white">
-                    <use xlink:href="#path-3"></use>
-                </mask>
-                <g id="Clip-5"></g>
-                <path d="M9.9336,7.7952 L10.9096,10.7222 C10.9366,10.8052 10.8586,10.8832 10.7756,10.8562 L7.8486,9.8802 C7.6926,9.8282 7.5506,9.7412 7.4346,9.6252 L0.8816,3.0722 L3.1246,0.8292 L9.6776,7.3822 C9.7936,7.4982 9.8816,7.6392 9.9336,7.7952" id="Fill-4" fill="#000000" mask="url(#mask-4)"></path>
-            </g>
-            <path d="M6.7607,0.4645 L6.7607,0.4645 C6.1417,1.0845 6.1417,2.0885 6.7607,2.7075 L7.1347,3.0815 L9.3777,0.8385 L9.0037,0.4645 C8.3837,-0.1545 7.3797,-0.1545 6.7607,0.4645" id="Fill-7" fill="#000000"></path>
-        </g>
-    </g>
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="3" y="3" width="17" height="18">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M3 3.80872H19.9485V20.7567H3V3.80872Z" fill="white"/>
+</mask>
+<g mask="url(#mask0)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.00591 3.80872C3.49291 3.80872 2.99991 4.20672 2.99991 4.80872V19.7587C2.99991 20.3097 3.44691 20.7567 3.99891 20.7567H18.9479C19.8379 20.7567 20.2829 19.6817 19.6539 19.0527L4.70491 4.10272C4.50191 3.89972 4.25191 3.80872 4.00591 3.80872ZM6.49491 10.8367L12.9209 17.2617H6.49491V10.8367Z" fill="black"/>
+</g>
+<mask id="mask1" mask-type="alpha" maskUnits="userSpaceOnUse" x="10" y="4" width="11" height="11">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M10.8816 4.58643H20.915V14.6189H10.8816V4.58643Z" fill="white"/>
+</mask>
+<g mask="url(#mask1)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M19.9336 11.5524L20.9096 14.4794C20.9366 14.5624 20.8586 14.6404 20.7756 14.6134L17.8486 13.6374C17.6926 13.5854 17.5506 13.4984 17.4346 13.3824L10.8816 6.82943L13.1246 4.58643L19.6776 11.1394C19.7936 11.2554 19.8816 11.3964 19.9336 11.5524Z" fill="black"/>
+</g>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.7607 3.46449C9.1417 4.08449 9.1417 5.08849 9.7607 5.70749L10.1347 6.08149L12.3777 3.83849L12.0037 3.46449C11.3837 2.84549 10.3797 2.84549 9.7607 3.46449Z" fill="black"/>
 </svg>

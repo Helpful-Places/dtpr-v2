@@ -1,29 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 54 (76480) - https://sketchapp.com -->
-    <title>dtpr_icons / purpose / ic_black / agency</title>
-    <desc>Created with Sketch.</desc>
-    <defs>
-        <polygon id="path-1" points="0.0414 0 4.9999 0 4.9999 4.9583 0.0414 4.9583"></polygon>
-        <polygon id="path-3" points="0 0.1274 16.8729 0.1274 16.8729 17 0 17"></polygon>
-    </defs>
-    <g id="dtpr_icons-/-purpose-/-ic_black-/-agency" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <rect id="Container" x="0" y="0" width="24" height="24"></rect>
-        <g id="Group-7" transform="translate(2.000000, 2.000000)">
-            <g id="Group-3" transform="translate(15.000000, 0.000000)">
-                <mask id="mask-2" fill="white">
-                    <use xlink:href="#path-1"></use>
-                </mask>
-                <g id="Clip-2"></g>
-                <path d="M4.6204,1.2953 L3.7044,0.3793 C3.1984,-0.1267 2.3794,-0.1267 1.8734,0.3793 L0.0414,2.2113 L2.7894,4.9583 L4.6204,3.1273 C5.1264,2.6213 5.1264,1.8013 4.6204,1.2953" id="Fill-1" fill="#000000" mask="url(#mask-2)"></path>
-            </g>
-            <g id="Group-6" transform="translate(0.000000, 3.000000)">
-                <mask id="mask-4" fill="white">
-                    <use xlink:href="#path-3"></use>
-                </mask>
-                <g id="Clip-5"></g>
-                <path d="M1.5149,12.7374 C1.3719,12.8794 1.2659,13.0524 1.2029,13.2434 L0.0069,16.8294 C-0.0271,16.9304 0.0699,17.0274 0.1709,16.9934 L3.7559,15.7984 C3.9479,15.7344 4.1199,15.6274 4.2629,15.4854 L16.8729,2.8744 L14.1249,0.1274 L1.5149,12.7374 Z" id="Fill-4" fill="#000000" mask="url(#mask-4)"></path>
-            </g>
-        </g>
-    </g>
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="17" y="2" width="5" height="5">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M17.0414 2H21.9999V6.9583H17.0414V2Z" fill="white"/>
+</mask>
+<g mask="url(#mask0)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M21.6204 3.29526L20.7044 2.37926C20.1984 1.87326 19.3794 1.87326 18.8734 2.37926L17.0414 4.21126L19.7894 6.95826L21.6204 5.12726C22.1264 4.62126 22.1264 3.80126 21.6204 3.29526Z" fill="black"/>
+</g>
+<mask id="mask1" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="5" width="17" height="17">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M2 5.12744H18.8729V22H2V5.12744Z" fill="white"/>
+</mask>
+<g mask="url(#mask1)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M3.5149 17.7374C3.3719 17.8794 3.2659 18.0524 3.2029 18.2434L2.0069 21.8294C1.9729 21.9304 2.0699 22.0274 2.1709 21.9934L5.7559 20.7984C5.9479 20.7344 6.1199 20.6274 6.2629 20.4854L18.8729 7.87444L16.1249 5.12744L3.5149 17.7374Z" fill="black"/>
+</g>
 </svg>
