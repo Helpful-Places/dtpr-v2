@@ -224,8 +224,8 @@ $(function () {
           "translate(0, -" + phonePositions[index][frame] + "px)"
         );
       } else {
-        $("#sticky-prototype").hide();
-        $("#chat-client").hide();
+        // $("#sticky-prototype").hide();
+        // $("#chat-client").hide();
       }
     })
     .onStepExit((response) => {})
