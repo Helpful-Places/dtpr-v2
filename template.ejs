@@ -1,0 +1,3286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>DTPR</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/intersection-observer"></script>
+    <script src="https://unpkg.com/scrollama"></script>
+  </head>
+  <body>
+
+    <% 
+      // Story Variables
+      var orgNeighbourhood = "Neighbourhood Org."
+      var orgBike = "Bikeshare Co."
+      var orgLibrary ="Library Dept."
+      var orgStore ="Shop Co."
+      var orgBank = "Bank Co."
+      var orgGov = "Gov Dept.";
+    %> 
+
+    <!-- NAVIGATION -->
+    <%=
+    require("ejs-loader!./templates/header.ejs")({}) %>
+    <div id="tapestry">
+      <div class="banner">
+        <img src="images/assistant_location_city.svg" class="tapestry-assistant" width="84" height="96" style="margin-left: 1430px; margin-top: 312px; position: absolute; z-index: 1;" />
+        <img src="images/assistant_location_city.svg" class="tapestry-assistant" width="84" height="96" style="margin-left: 4688px; margin-top: 456px; position: absolute; z-index: 1;" />
+        <img src="images/assistant_location_city.svg" class="tapestry-assistant" width="84" height="96" style="margin-left: 5904px; margin-top: 330px; position: absolute; z-index: 1;" />
+        <img src="images/assistant_location_city.svg" class="tapestry-assistant" width="50" height="58" style="margin-left: 8849px; margin-top: 318px; position: absolute; z-index: 1;" />
+        <img src="images/assistant_location_city.svg" class="tapestry-assistant" width="82" height="94" style="margin-left: 10907px; margin-top: 430px; position: absolute; z-index: 1;" />
+        <img src="images/assistant_location_city.svg" class="tapestry-assistant" width="84" height="96" style="margin-left: 12696px; margin-top: 424px; position: absolute; z-index: 1;" />
+        <img src="images/assistant_location_city.svg" class="tapestry-assistant" width="110" height="126" style="margin-left: 15643px; margin-top: 322px; position: absolute; z-index: 1;" />
+        <img src="images/assistant_location_city.svg" class="tapestry-assistant" width="104" height="118" style="margin-left: 17479px; margin-top: 452px; position: absolute; z-index: 1;" />
+        <img src="images/assistant_location_city.svg" class="tapestry-assistant" width="226" height="256" style="margin-left: 18379px; margin-top: 304px; position: absolute; z-index: 1;" />
+        <img src="images/assistant_location_city.svg" class="tapestry-assistant" width="158" height="178" style="margin-left: 19361px; margin-top: 398px; position: absolute; z-index: 1;" />
+        <img src="images/assistant_location_city.svg" class="tapestry-assistant" width="186" height="210" style="margin-left: 21921px; margin-top: 446px; position: absolute; z-index: 1;" />
+        <img src="images/assistant_location_city.svg" class="tapestry-assistant" width="74" height="84" style="margin-left: 25708px; margin-top: 526px; position: absolute; z-index: 1;" />
+        <img src="images/assistant_location_city.svg" class="tapestry-assistant" width="88" height="100" style="margin-left: 27250px; margin-top: 250px; position: absolute; z-index: 1;" />
+        <img src="images/scenario-1.svg" width="4174" height="1000" />
+        <img src="images/scenario-2.svg" width="4156" height="1000" />
+        <img src="images/scenario-3.svg" width="3818" height="1000" />
+        <img src="images/scenario-4.svg" width="3878" height="1000" />
+        <img src="images/scenario-5.svg" width="4168" height="1000" />
+        <img src="images/scenario-6.svg" width="4458" height="1000" />
+        <img src="images/scenario-7.svg" width="3412" height="1000" />
+      </div>
+    </div>
+    <div id="section-about" class="step" data-step="section-about">
+      <div class="sticky-section-header">
+        <%=
+        require("ejs-loader!./templates/section-divider.ejs")({
+          section:"Vision",
+          title: "DTPR",
+          icon:"dtpr-logo-Blue",
+        }) %>
+      </div>
+      <!-- <div class="sticky-section-header">
+        <%= require("ejs-loader!./templates/header.ejs")({}) %>
+      </div> -->
+      <div class="section-image" style="background-image: url(images/Intro_header.svg);">
+        <img src="images/Intro_header.svg" />
+      </div>
+      <div class="container" id="about">
+        <div class="row mt-4">
+          <div class="col-12 col-md-9 mt-2">
+            <h3>About</h3>
+            <h2 style="color:black;">DTPR is an open-source communication standard that enables transparency, accountability, and control for people. The standard is free for anyone to use. </h2> 
+            <h3>Join us on Slack</h3>
+            <div id="CommunityInviter"></div>
+          <script>
+            window.CommunityInviterAsyncInit = function () {
+              CommunityInviter.init({
+                app_url:'dtpr',
+                team_id:'dtprworkspace'
+             })
+            };
+
+            (function(d, s, id){
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) {return;}
+              js = d.createElement(s); js.id = id;
+              js.src = "https://communityinviter.com/js/communityinviter.js";
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'Community_Inviter'));
+          </script>
+          </div>
+          
+        </div>
+
+        <div class="row mt-3">
+          <div class="col-12 col-md-7 d-flex">
+            <div class="card card-darkblue mt-2 ">
+              <h3>The Problem</h3>
+              <h1>Technology can help make our roads safer for people, our buildings greener, and our homes healthier. But is it living up to its promises?</h1>
+            </div>
+          </div>
+          <div class="col-12 col-md-5 mt-2 d-flex">
+            <div class="card card-lightblue">
+              <h3>How can we be confident the technology is achieving its goal? Whether seeking safety, sustainability, or accessibility, many are left asking: what are the benefits, the risks, and the trade-offs we're making?</h3>
+              <p>Digital technology is all around us, but often invisible. There’s little transparency about what data these technologies are collecting, by whom, and for what purposes. We’ve also seen that much technology in the built environment lacks controls for people. </p>
+              <p>We’ve drafted a standard that enables transparency, accountability, and control for people.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 col-md-5 d-flex mt-2">
+            <div class="card card-image" style="background-image: url(images/Intro_Solution.svg);">
+              <!-- <img src="images/Intro_Solution.svg" /> -->
+            </div>
+          </div>
+          <div class="col-12 col-md-7 d-flex mt-2">
+            <div class="card card-green">
+              <h3>A Proposal</h3>
+              <h1 class="pb-3">Digital Trust for Places and Routines is about technology that enables agency for people in the real world.</h1>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="row flex-nowrap overflow-auto cards-projects">
+          <div class="col-10 col-md-4 d-flex mt-2">
+            <div class="card card-lightgreen">
+              <div class="btn-circle"><i class="material-icons md-24">arrow_forward</i></div>
+              <h2>Get<br /> involved</h2>
+              <p>Join Helpful Places, Digital Public Square, the Office of New Urban Mechanics, City of Boston, and other contributors.</p>
+            </div>
+          </div>
+          <div class="col-10 col-md-3 d-flex mt-2">
+            <div class="card card-lightgreen">
+              <a href="#about" class="text-green">
+                <i class="material-icons md-16 float-right">launch</i>
+                <h4>Join Slack</h4>
+              </a>
+              <div class="thumbnail" style="background-image: url(images/CardImage_1.svg);"></div>
+            </div>
+          </div>
+          <div class="col-10 col-md-3 d-flex mt-2">
+            <div class="card card-lightgreen">
+              <a href="mailto:dtpr@helpfulplaces.com" class="text-green">
+                <i class="material-icons md-16 float-right">launch</i>
+                <h4>Email us</h4>
+              </a>
+              <div class="thumbnail" style="background-image: url(images/CardImage_2.svg);"></div>
+            </div>
+          </div>
+          <div class="col-10 col-md-3 d-flex mt-2">
+            <div class="card card-lightgreen">
+              <a href="https://github.com/Helpful-Places/dtpr" class="text-green">
+                <i class="material-icons md-16 float-right">launch</i>
+                <h4>On Github</h4>
+              </a>
+              <div class="thumbnail" style="background-image: url(images/CardImage_3.svg);"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 col-md-5 mt-2 d-flex">
+            <div class="card card-image" style="background-image: url(images/Intro_Mission.svg);height: 480px;"></div>
+          </div>
+          <div class="col-12 col-md-7 mt-2 d-flex">
+            <div class="card card-red">
+              <h3>Our Mission</h3>
+              <h1>Enable human agency in the world's shared spaces.</h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="row flex-nowrap overflow-auto cards-principles">
+          <div class="col-10 col-md-4 d-flex mt-2">
+            <div class="card card-lightred">
+              <div class="btn-circle"><i class="material-icons md-24">arrow_forward</i></div>
+              <h3>5 Principles</h3>
+            </div>
+          </div>
+          <div class="col-10 col-md-5 d-flex mt-2">
+            <div class="card card-lightred">
+              <h6>Provide transparency</h6>
+              <p>We want to help people increase their awareness of how digital technology in physical spaces works and give them avenues to learn more or follow up.</p>
+            </div>
+          </div>
+          <div class="col-10 col-md-5 d-flex mt-2">
+            <div class="card card-lightred">
+              <h6>Offer communication and utility</h6>
+              <p>People may want to know about what data is being collected around them, but they also might want to know how to use that data or even to make better use of the environment itself. How might signage be a starting point for helping people better navigate and utilize their surroundings?</p>
+            </div>
+          </div>
+          <div class="col-10 col-md-5 d-flex mt-2">
+            <div class="card card-lightred">
+              <h6>Outcomes not outputs</h6>
+              <p>More signs are often not the answer. As visual noise increases, less meaningful information actually gets across. We want to develop a way to know whether signage or channels are working for people; we need that feedback so we can improve the design over time.</p>
+            </div>
+          </div>
+          <div class="col-10 col-md-5 d-flex mt-2">
+            <div class="card card-lightred">
+              <h6>Design for adaptation</h6>
+              <p>We know this is just an initial take, and we intend for others to build on this work.</p>
+            </div>
+          </div>
+          <div class="col-10 col-md-5 d-flex mt-2">
+            <div class="card card-lightred">
+              <h6>Blend digital and physical</h6>
+              <p>We are in a unique position to consider how people move from a digital to a physical medium and back. This transition should feel useful and coherent.</p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      
+    </div>
+
+    <!-- Tools -->
+    <div id="section-tools" class="step pb-5" data-step="section-tools">
+      <div class="sticky-section-header green green">
+        <%=
+        require("ejs-loader!./templates/section-divider.ejs")({
+          section:"Tools",
+          title: "Tools",
+          icon:"circle-icon-get_app",
+        }) %>
+      </div>
+      <div class="section-image" style="background-image: url(images/Intro_header.svg);">
+        <img src="images/Tools_Header.svg" />
+      </div>
+      <div class="container">
+        <div class="row mt-4">
+          <div class="col-12 col-md-9 mt-2">
+            <h3 class="text-green">Tools</h3>
+            <h2 style="color:black;">We believe that creating a unified taxonomy and visual language is a critical starting point, and that digital tools could help people to follow up and learn more.</h2>
+            <p style="color:black;">In 2019, experts came together in cities around the world in co-design sessions to collaborate and prototype an initial set of open communication standards for digital transparency in the public realm. In 2020, this initial draft was  refined through several cycles of online expert charrettes and small meetings, iterative prototype development, and longitudinal inclusive usability and concept testing. These draft standards, as well as all the co-design activities and materials that generated them, are publicly and freely available for others to adopt, use, and build upon.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-5 mt-2 d-flex">
+            <div class="card card-image" style="background-image: url(images/Tools_Technology.png);height: 480px;"></div>
+          </div>
+          <div class="col-12 col-md-7 mt-2 d-flex">
+            <div class="card card-green">
+              <h1>Technologies</h1>
+              <p>A standardised way to describe sensors and convey what kind of data and processing they’re performing.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-7 mt-2 d-flex">
+            <div class="card card-green">
+              <h1>Places</h1>
+              <p>A standard way to describe systems within places, and what sensors, processing, and purposes they serve.</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-5 mt-2 d-flex">
+            <div class="card card-image" style="background-image: url(images/Tools_Places.png);height: 480px;"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-5 mt-2 d-flex">
+            <div class="card card-image" style="background-image: url(images/Tools_Routines.png);height: 480px;"></div>
+          </div>
+          <div class="col-12 col-md-7 mt-2 d-flex">
+            <div class="card card-green">
+              <h1>Routines</h1>
+              <p>A vision for how agency and control can become part of everyday routines that are supported by digital technologies.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-7 mt-2 d-flex">
+            <div class="card card-green">
+              <h1>The DTPR Taxonomy, Design Patterns and Prototypes</h1>
+              <p>The core of the DTPR communication standard is a taxonomy of concepts around digital tech and data practices, and a set of icons to quickly and clearly communicate those concepts. These components can then expressed in a number of ways - from physical signage  to digital channels for communication – which together, help visualize and convey how a digital system works.</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-5 mt-2 d-flex">
+            <div class="card card-image" style="background-image: url(images/Tools_Contributors.png);height: 480px;"></div>
+          </div>
+        </div>
+        <div class="row flex-nowrap overflow-auto cards-projects">
+          <div class="col-10 col-md-4 d-flex mt-2">
+            <div class="card card-lightgreen">
+              <div class="btn-circle"><i class="material-icons md-24">arrow_forward</i></div>
+              <h2>Tools & Resources</h2>
+            </div>
+          </div>
+          <div class="col-10 col-md-3 d-flex mt-2">
+            <div class="card card-lightgreen">
+              <a href="https://airtable.com/shrgffVQQN7CsFhFt" class="text-green">
+                <i class="material-icons md-16 float-right">launch</i>
+                <h4>Taxonomy</h4>
+                <div class="thumbnail"></div>
+              </a>
+            </div>
+          </div>
+          <div class="col-10 col-md-3 d-flex mt-2">
+            <div class="card card-lightgreen">
+              <a href="https://github.com/Helpful-Places/dtpr/tree/master/dtpr_icons" class="text-green">
+                <i class="material-icons md-16 float-right">launch</i>
+                <h4>Icons</h4>
+                <div class="thumbnail"></div>
+              </a>
+            </div>
+          </div>
+          <div class="col-10 col-md-3 d-flex mt-2">
+            <div class="card card-lightgreen">
+              <a href="https://github.com/sidewalklabs/dtpr/blob/master/dtpr_designguide/DTPR_Design_Guide.pdf" class="text-green">
+                <i class="material-icons md-16 float-right">launch</i>
+                <h4>Signage</h4>
+                <div class="thumbnail"></div>
+              </a>
+            </div>
+          </div>
+          <div class="col-10 col-md-3 d-flex mt-2">
+            <div class="card card-lightgreen">
+              <a href="https://dtpr.sidewalklabs.com/dtpr_prototype/" class="text-green">
+                <i class="material-icons md-16 float-right">launch</i>
+                <h4>Prototype</h4>
+                <div class="thumbnail"></div>
+              </a>
+            </div>
+          </div>
+          <div class="col-10 col-md-3 d-flex mt-2">
+            <div class="card card-lightgreen">
+              <a href="https://helpfulplaces.com/dtpr_chatbot/place.html" class="text-green">
+                <i class="material-icons md-16 float-right">launch</i>
+                <h4>Chatbot</h4>
+                <div class="thumbnail"></div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-5 mt-2 d-flex">
+            <div class="card card-image" style="background-image: url(images/Tools_Codesign.png);height: 480px;"></div>
+          </div>
+          <div class="col-12 col-md-7 mt-2 d-flex">
+            <div class="card card-green">
+              <h1>Co-Design Materials and Research Findings</h1>
+              <p>You can find the materials used to support the development of this project here</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row flex-nowrap overflow-auto cards-projects">
+          <div class="col-10 col-md-4 d-flex mt-2">
+            <div class="card card-lightgreen">
+              <div class="btn-circle"><i class="material-icons md-24">arrow_forward</i></div>
+              <h2>Design Materials</h2>
+            </div>
+          </div>
+          <div class="col-10 col-md-3 d-flex mt-2">
+            <div class="card card-lightgreen">
+              <a href="https://docs.google.com/presentation/d/1pyTM8Qr1ucAAWh80YRR2uuOZpNOcaxemZHhSCr2th_8/edit?usp=sharing" class="text-green">
+                <i class="material-icons md-16 float-right">launch</i>
+                <h4>2020 Charrettes</h4>
+                <div class="thumbnail"></div>
+              </a>
+            </div>
+          </div>
+          <div class="col-10 col-md-3 d-flex mt-2">
+            <div class="card card-lightgreen">
+              <a href="https://docs.google.com/presentation/d/1dPSQZdKiUMO61HWtvfqFHPJNzdnVwHvigGR6Wq_1t7Q/edit?usp=sharing" class="text-green">
+                <i class="material-icons md-16 float-right">launch</i>
+                <h4>2020 Office Hours</h4>
+                <div class="thumbnail"></div>
+              </a>
+            </div>
+          </div>
+          <div class="col-10 col-md-3 d-flex mt-2">
+            <div class="card card-lightgreen">
+              <a href="https://docs.google.com/document/d/1iue6FRWxdKYbkPdLe02SSK81Qv2FuE_zt4GBCQIu_Dg/edit?usp=sharing" class="text-green">
+                <i class="material-icons md-16 float-right">launch</i>
+                <h4>Intercept Surveys</h4>
+                <div class="thumbnail"></div>
+              </a>
+            </div>
+          </div>
+          <div class="col-10 col-md-3 d-flex mt-2">
+            <div class="card card-lightgreen">
+              <a href="https://docs.google.com/document/d/1542TNlhUv-mKkDISZbCe01s50TLnZPWrkOx6Qpkltd4/edit?usp=sharing" class="text-green">
+                <i class="material-icons md-16 float-right">launch</i>
+                <h4>Longitudinal User Research</h4>
+                <div class="thumbnail"></div>
+              </a>
+            </div>
+          </div>
+          <div class="col-10 col-md-3 d-flex mt-2">
+            <div class="card card-lightgreen">
+              <a href="https://docs.google.com/document/d/12eCyqVMMPSXszL-0WYITixLw--RVP34-ahwr_U1rkk4/edit?usp=sharing" class="text-green">
+                <i class="material-icons md-16 float-right">launch</i>
+                <h4>2020 Charrette Summaries</h4>
+                <div class="thumbnail"></div>
+              </a>
+            </div>
+          </div>
+          <div class="col-10 col-md-3 d-flex mt-2">
+            <div class="card card-lightgreen">
+              <a href="https://medium.com/code-for-canada/grit-toronto-test-4-digital-transparency-in-the-public-realm-da3f47eb1510" class="text-green">
+                <i class="material-icons md-16 float-right">launch</i>
+                <h4>2019 User Research</h4>
+                <div class="thumbnail"></div>
+              </a>
+            </div>
+          </div>
+          <div class="col-10 col-md-3 d-flex mt-2">
+            <div class="card card-lightgreen">
+              <a href="https://docs.google.com/document/d/1lWm56kvM9pJDun8aubbiDIZ0BuPZD4JrkOgdg_rXsh8/edit?usp=sharing" class="text-green">
+                <i class="material-icons md-16 float-right">launch</i>
+                <h4>2019 Share-Out Sessions</h4>
+                <div class="thumbnail"></div>
+              </a>
+            </div>
+          </div>
+          <div class="col-10 col-md-3 d-flex mt-2">
+            <div class="card card-lightgreen">
+              <a href="https://docs.google.com/document/d/1M7fcW4dV5g2houCL4hH_CSCm3udpmAdjiWZ9acOxP4g/edit?usp=sharing" class="text-green">
+                <i class="material-icons md-16 float-right">launch</i>
+                <h4>Co-Design Sessions</h4>
+                <div class="thumbnail"></div>
+              </a>
+            </div>
+          </div>
+          <div class="col-10 col-md-3 d-flex mt-2">
+            <div class="card card-lightgreen">
+              <a href="https://github.com/sidewalklabs/dtpr/tree/master/dtpr_codesignkit" class="text-green">
+                <i class="material-icons md-16 float-right">launch</i>
+                <h4>2019 Co-Design Kit</h4>
+                <div class="thumbnail"></div>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row pb-4">
+          <div class="col-12 col-md-4 mt-4 text-green">
+            <h2>DTPR Pilots</h2>
+            <div class="link-list"> 
+              <div><a target="_blank" href="https://www.boston.gov/departments/new-urban-mechanics">City of Boston</a></div>
+              <div><a target="_blank" href="mailto:dtpr@helpfulplaces.com">Tell us about your idea or project</a></div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 mt-4 text-green">
+            <h2>More Projects</h2>
+            <div class="link-list">
+              <div><a href="https://foundation.mozilla.org/en/privacynotincluded/" target="_blank">Privacy not included (Mozilla)</a></div>
+              <div><a href="https://www.privacyassistant.org/" target="_blank">Privacy assistant (CMU)</a></div>
+              <div><a href="https://ieeexplore.ieee.org/document/8553750" target="_blank">Personal AI (IEEE)</a></div>
+              <div><a href="https://arrayofthings.github.io/" target="_blank">Array of things (Chicago)</a></div>
+              <div><a href="https://ajuntament.barcelona.cat/digital/en/digital-transformation/urban-technology/sentilo" target="_blank">Sensillio (Barcelona)</a></div>
+              <div><a href="https://www.seattle.gov/tech/initiatives/privacy/surveillance-technologies/about-surveillance-" target="_blank">Inventory of Surveillence Tech (Seattle)</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    </div>
+    
+    <div id="section-license" class="step borderpy-5" data-step="section-license">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-9">
+            <h1 class="text-green">License</h1>
+            <p class="text-green" style="font-size: 20px;">The Icons, Design Guide and Taxonomy for DTPR are licensed by the Digital Transparency in the Public Realm
+              contributors under the Creative Commons Attribution 4.0 International (CC BY 4.0).
+              Portions of the DTPR Icons incorporate elements of, or are derived from, the Material icons. The Material
+              icons are available under the Apache License 2.0.
+              The source code for the Digital Channel Prototype is licensed under Apache License 2.0.
+              Sidewalk Labs trademarks and other brand features within these works are not included in this license.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+<% 
+
+var taxonomy = [
+  {id:"purpose",label:"Purpose"},
+  {id:"technology",label:"Technology"},
+  {id:"data_type",label:"Data Type"},
+  {id:"data_process",label:"Processing"},
+  {id:"access",label:"Access"},
+  {id:"storage",label:"Storage"},
+];
+
+%> 
+    <div id="section-taxonomy" class="step" data-step="section-taxonomy">
+      <div class="sticky-section-header green green">
+        <%=
+        require("ejs-loader!./templates/section-divider.ejs")({
+          section:"Taxonomy",
+          title: "Taxonomy",
+          icon:"circle-icon-category",
+        }) %>
+      </div>
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-12 col-md-9">
+            <h1 class="text-green">Full Taxonomy</h1>
+            <h4 class="text-green">Below you’ll find working definitions for the DTPR taxonomy along with accompanying icons.</h4>
+          </div>
+          <div class="col-12">
+            <% for (var i =0; i <taxonomy.length; i++ ) { %>
+              <a href="#section-taxonomy-<%= taxonomy[i].id %>" data-link="section-taxonomy-<%= taxonomy[i].id %>" class="btn btn-green mr-1 mt-1"><%= taxonomy[i].label %></a>
+            <% } %>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <div id="section-taxonomy-purpose" class="step taxonomy-step" data-step="section-taxonomy-purpose">
+      <div class="sticky-section-header green">
+        <%=
+        require("ejs-loader!./templates/section-divider.ejs")({
+          section:"Purpose",
+          title: "Purpose",
+          icon:"circle-icon-category",
+        }) %>
+      </div>
+      <div class="container taxonomy-container">
+        <div class="row">
+          <div class="col taxonomy-seemore"><div class="btn-seemore">SEE MORE</div></div>
+        </div>
+        <div class="row">
+          <div class="col">
+            
+            <table class="table table-taxonomy">
+              <thead>
+                <tr>
+                  <th>Icon</th>
+                  <th>Purpose</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/purpose/enforcement.svg"
+                      alt="Encorcement"
+                    />
+                  </td>
+                  <td>Enforcement</td>
+                  <td>
+                    Used for enforcement of rules or regulations. Find out more
+                    <a href="https://en.wikipedia.org/wiki/Law_enforcement">here</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/purpose/energy.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Energy Efficiency</td>
+                  <td>
+                    Reduces energy use and/or helps conserve energy. Find out more about
+                    <a href="https://en.wikipedia.org/wiki/Efficient_energy_use"
+                      >energy efficiency</a
+                    >
+                    and
+                    <a href="https://en.wikipedia.org/wiki/Energy_conservation"
+                      >energy conservation</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/purpose/mobility.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Mobility</td>
+                  <td>
+                    Supports how people and materials move around. Find out more
+                    <a href="https://en.wikipedia.org/wiki/Transport">here</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/purpose/inform.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Inform</td>
+                  <td>
+                    Supports the provision of information, for example about a location, a
+                    service, or to provide assistance
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/purpose/planning.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Planning &amp; Decision-making</td>
+                  <td>
+                    Supports the development of future plans; or to enable or measure the
+                    impact of a decision. Examples include
+                    <a href="https://en.wikipedia.org/wiki/Urban_planning"
+                      >urban planning</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/purpose/security.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Safety &amp; Security</td>
+                  <td>
+                    Enables a safe and/or secure environment, for example for the purposes
+                    of <a href="https://en.wikipedia.org/wiki/Fire_safety">fire safety</a>,
+                    <a href="https://en.wikipedia.org/wiki/Home_security">home security</a>
+                    or ensuring safe passage in places such as
+                    <a href="https://en.wikipedia.org/wiki/Airport_security">airports</a> or
+                    <a href="https://en.wikipedia.org/wiki/Road_traffic_safety">roads</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/purpose/accessibility.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Accessibility</td>
+                  <td>
+                    Ensures that everyone has equal access to a space or a service. Find out
+                    more about
+                    <a href="https://en.wikipedia.org/wiki/Accessibility">accessibility</a>
+                    and
+                    <a href="https://en.wikipedia.org/wiki/Universal_design"
+                      >universal design</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/purpose/ecology.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Ecology</td>
+                  <td>
+                    Supports the measurement or monitoring of the natural environment. Find
+                    out more about
+                    <a href="https://en.wikipedia.org/wiki/Natural_environment"
+                      >the natural environment</a
+                    >, <a href="https://en.wikipedia.org/wiki/Ecology">ecology</a> and
+                    <a href="https://en.wikipedia.org/wiki/Environmental_science"
+                      >environmental science</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/purpose/waste.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Waste Management</td>
+                  <td>
+                    Supports the handling and disposal of waste, including as
+                    <a href="https://en.wikipedia.org/wiki/Recycling">recyclables</a>,
+                    <a href="https://en.wikipedia.org/wiki/Compost">compost</a> and
+                    [hazardous materials] (<a
+                      href="https://en.wikipedia.org/wiki/Hazardous_waste}"
+                      >https://en.wikipedia.org/wiki/Hazardous_waste}</a
+                    >. Find out more about
+                    <a href="https://en.wikipedia.org/wiki/Waste_management"
+                      >waste management</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/purpose/water.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Water Efficiency</td>
+                  <td>
+                    Reduces water use and/or helps conserve water. Find out more about water
+                    <a href="https://en.wikipedia.org/wiki/Water_efficiency">efficiency</a>
+                    and
+                    <a href="https://en.wikipedia.org/wiki/Water_conservation"
+                      >conservation</a
+                    >, and
+                    <a href="https://en.wikipedia.org/wiki/Green_infrastructure"
+                      >green infrastructure</a
+                    >.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/purpose/emergency.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Fire &amp; Emergency</td>
+                  <td>
+                    Supports services that ensure public safety and health related to
+                    <a href="https://en.wikipedia.org/wiki/Emergency">emergencies</a>. Find
+                    out more about
+                    <a href="https://en.wikipedia.org/wiki/Emergency_service"
+                      >emergency services</a
+                    >.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/purpose/health.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Health</td>
+                  <td>
+                    Supports the measurement or monitoring of the aspects of the physical
+                    environment that impacts human health, such as
+                    <a href="https://en.wikipedia.org/wiki/Radiation_protection"
+                      >radiation</a
+                    >
+                    or
+                    <a href="https://en.wikipedia.org/wiki/Air_pollution">air quality</a>,
+                    or in specific contexts such as the workplace. Find out more about
+                    <a href="https://en.wikipedia.org/wiki/Environmental_monitoring"
+                      >environmental monitoring</a
+                    >
+                    and
+                    <a href="https://en.wikipedia.org/wiki/Occupational_safety_and_health"
+                      >occupational health and safety</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/purpose/agency.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Agency &amp; Interaction</td>
+                  <td>
+                    Enables you to control or interact with aspects of a space or a
+                    technology. Find out more about
+                    <a href="https://en.wikipedia.org/wiki/Interactive_media"
+                      >interactive media</a
+                    >
+                    and
+                    <a href="https://en.wikipedia.org/wiki/Virtual_reality"
+                      >virtual reality</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/purpose/toggle.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Switch</td>
+                  <td>
+                    Supports a mechanical function - such as turning a device on or off,
+                    opening or closing, or adjusting brightness and intensity.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/purpose/research.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Research &amp; Development</td>
+                  <td>
+                    Supports exploratory research and testing. Find out more
+                    <a href="https://en.wikipedia.org/wiki/Research_and_development"
+                      >here</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/purpose/entry.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Entry</td>
+                  <td>
+                    Supports authentication or validation in order to access a space or a
+                    service. Find out more
+                    <a href="https://en.wikipedia.org/wiki/Access_control">here</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/purpose/arts.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Arts &amp; Culture</td>
+                  <td>
+                    Enables artistic and/or cultural expression. Find out more
+                    <a href="https://en.wikipedia.org/wiki/Interactive_art">here</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/purpose/connectivity.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Connectivity</td>
+                  <td>
+                    Enables connectivity of devices to a digital network. Find out more
+                    <a href="https://en.wikipedia.org/wiki/Interactive_art">here</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/purpose/logistics.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Logistics</td>
+                  <td>
+                    Supports the movements of goods or materials. Find out more
+                    <a href="https://en.wikipedia.org/wiki/Interactive_art">here</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <hr />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="section-taxonomy-technology" class="step taxonomy-step" data-step="section-taxonomy-technology">
+      <div class="sticky-section-header green">
+        <%=
+        require("ejs-loader!./templates/section-divider.ejs")({
+          section:"Technology",
+          title: "Technology",
+          icon:"circle-icon-category",
+        }) %>
+      </div>
+      <div class="container taxonomy-container">
+        <div class="row">
+          <div class="col taxonomy-seemore"><div class="btn-seemore">SEE MORE</div></div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <table class="table table-taxonomy">
+              <thead>
+                <tr>
+                  <th>Icon</th>
+                  <th>Technology</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/tech/video.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Video camera</td>
+                  <td>
+                    Collects video footage. Find out more
+                    <a href="https://en.wikipedia.org/wiki/Video">here</a>.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/tech/video.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Video camera - infrared</td>
+                  <td>
+                    Collects video footage in the
+                    <a href="https://en.wikipedia.org/wiki/Infrared_photography"
+                      >infrared</a
+                    >
+                    portion of the electromagnetic spectrum.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/tech/image.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Still camera</td>
+                  <td>
+                    Collects
+                    <a href="https://en.wikipedia.org/wiki/Image#Characteristics"
+                      >still images</a
+                    >. Find out more about cameras
+                    <a href="https://en.wikipedia.org/wiki/Camera">here</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/tech/image.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Still camera - infrared</td>
+                  <td>
+                    Collects still images in the
+                    <a href="https://en.wikipedia.org/wiki/Infrared_photography"
+                      >infrared</a
+                    >
+                    portion of the electromagnetic spectrum.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/tech/voice.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Assistance Station</td>
+                  <td>
+                    Provides access to assistive services. Examples include
+                    <a href="https://en.wikipedia.org/wiki/Assistive_technology"
+                      >assistive technologies</a
+                    >
+                    and
+                    <a href="https://en.wikipedia.org/wiki/Virtual_assistant"
+                      >virtual assistants</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/tech/voice.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Microphone</td>
+                  <td>
+                    A device that collects audio. Find out more
+                    <a href="https://en.wikipedia.org/wiki/Microphone">here</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/tech/light.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Passive Infrared Sensor</td>
+                  <td>
+                    An electronic sensor that measures infrared (IR) light radiating from
+                    objects in its field of view. Find out more
+                    <a href="https://en.wikipedia.org/wiki/Passive_infrared_sensor">here</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/tech/water.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Soil Moisture Sensor</td>
+                  <td>
+                    Soil moisture sensors measures the water content in soil. Find out more
+                    <a href="https://en.wikipedia.org/wiki/Soil_moisture_sensor">here</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/tech/water.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Water Quality</td>
+                  <td>
+                    Measures various aspects of water quality, such as the amount of
+                    dissolved oxygen in water, pH, nitrates and dissolved oxygen. Find out
+                    more <a href="https://en.wikipedia.org/wiki/Water_quality">here</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/tech/sound.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Sound Level Meter</td>
+                  <td>
+                    Takes acoustic measurements, most typically for measuring noise
+                    pollution. Find out more
+                    <a href="https://en.wikipedia.org/wiki/Sound_level_meter">here</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/tech/light.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Radar</td>
+                  <td>
+                    Uses radio waves to detect objects, or measure how they are moving
+                    through a space, such as vehicles. Find out more
+                    <a href="https://en.wikipedia.org/wiki/Radar">here</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/tech/light.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>LiDAR</td>
+                  <td>
+                    Uses lasers to measure distances to objects, collecting data that can
+                    create a 3-D representation of the object. Find out more
+                    <a href="https://en.wikipedia.org/wiki/Lidar">here</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/tech/air.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Air Quality</td>
+                  <td>
+                    Measures various aspects of air quality, such as
+                    <a href="https://en.wikipedia.org/wiki/Pollen">pollen</a>,
+                    <a href="https://en.wikipedia.org/wiki/Particulate_pollution"
+                      >particulate matter</a
+                    >,
+                    <a
+                      href="https://en.wikipedia.org/wiki/Ozone#Ozone_in_Earth&#39;s_atmosphere"
+                      >ozone</a
+                    >, and
+                    <a href="https://en.wikipedia.org/wiki/Greenhouse_gas"
+                      >greenhouse gases</a
+                    >. Find out more
+                    <a href="https://en.wikipedia.org/wiki/Air_pollution">here</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/tech/air.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Weather Station</td>
+                  <td>
+                    A set of instruments for measuring atmospheric conditions such as
+                    temperature, precipitation, wind speed and direction, and barometric
+                    pressure. Find out more
+                    <a href="https://en.wikipedia.org/wiki/Weather_station">here</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/tech/wave.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Wireless Access Point</td>
+                  <td>
+                    Provides wireless access to a wired computer network, or to the
+                    internet. Find out more
+                    <a href="https://en.wikipedia.org/wiki/Wireless_access_point">here</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/tech/wave.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>RFID</td>
+                  <td>
+                    Enables the identification of items using electromagnetic fields,
+                    commonly used to track inventory in stores, but not for identifying
+                    individual items. Find out more
+                    <a href="https://en.wikipedia.org/wiki/Radio-frequency_identification"
+                      >here</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/tech/wave.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>NFC</td>
+                  <td>
+                    A wireless communication protocol for electronic devices that are within
+                    a short distance of each other, typically used in ticketing or payment
+                    systems. No identifying data is collected in this case. Find out more
+                    <a href="https://en.wikipedia.org/wiki/Near-field_communication"
+                      >here</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/tech/weight.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Weighing Scale</td>
+                  <td>
+                    A weighing scale is a device to measure weight or mass. No identifying
+                    data is collected in this case. Find out more
+                    <a href="https://en.wikipedia.org/wiki/Weighing_scale">here</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/tech/air.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Thermometer</td>
+                  <td>
+                    Measures the temperature of or changes of temperature in the physical
+                    environment, and quantifies those attributes according to a standardized
+                    scale such as Celsius or Fahrenheit. Find more more
+                    <a href="https://en.wikipedia.org/wiki/Thermometer">here</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/tech/yellow/wave.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Identifiable NFC</td>
+                  <td>
+                    A wireless communication protocol for electronic devices that are within
+                    a short distance of each other, typically used in ticketing or payment
+                    systems. In this case, unique identification is possible, for example if
+                    a particular item is closely associated with an individual&#39;s
+                    <a href="https://en.wikipedia.org/wiki/Personal_data">personal data</a>.
+                    Find out more
+                    <a href="https://en.wikipedia.org/wiki/Near-field_communication"
+                      >here</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/tech/yellow/wave.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Identifiable RFID</td>
+                  <td>
+                    Enables the identification of items using electromagnetic fields,
+                    commonly used to track inventory in stores. In this case, unique
+                    identification is possible, for example if a particular item is closely
+                    associated with an individual&#39;s
+                    <a href="https://en.wikipedia.org/wiki/Personal_data">personal data</a>.
+                    Find out more
+                    <a href="https://en.wikipedia.org/wiki/Radio-frequency_identification"
+                      >here</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/tech/yellow/video.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Identifiable Video</td>
+                  <td>
+                    Collects
+                    <a href="https://en.wikipedia.org/wiki/Video">video footage</a> of a
+                    sufficient resolution where individuals can be identified, for example
+                    by capturing images of faces or unique numbers such as vehicle license
+                    plates. Identifying information can be collected either through manual
+                    review by a person, or through
+                    <a href="https://en.wikipedia.org/wiki/Computer_vision"
+                      >computer vision</a
+                    >
+                    techniques that derives information in the form of data from video or
+                    images.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/tech/yellow/voice.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Identifiable Voice</td>
+                  <td>
+                    Audio data is collected that does or can identify individuals, either
+                    through manual review or by technologies that can determine either what
+                    is being said, or who is saying it. Find out more about
+                    <a href="https://en.wikipedia.org/wiki/Speech_recognition"
+                      >speech recognition</a
+                    >
+                    or
+                    <a href="https://en.wikipedia.org/wiki/Speaker_recognition"
+                      >speaker recognition</a
+                    >.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/tech/yellow/image.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Identifiable Image</td>
+                  <td>
+                    Collects
+                    <a href="https://en.wikipedia.org/wiki/Image#Characteristics"
+                      >still images</a
+                    >
+                    of a sufficient resolution where individuals can be identified, for
+                    example by capturing images of faces or unique numbers such as vehicle
+                    license plates. Identifying information can be collected either through
+                    manual review of images by a person, or through
+                    <a href="https://en.wikipedia.org/wiki/Computer_vision"
+                      >computer vision</a
+                    >
+                    techniques that derives information in the form of data from images.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/tech/blue/video.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>De-identified Video</td>
+                  <td>
+                    Collects
+                    <a href="https://en.wikipedia.org/wiki/Video">video footage</a> of a
+                    sufficient resolution where individuals can be identified, for example
+                    by capturing images of faces or unique numbers such as vehicle license
+                    plates. However, the video is processed in a way that removes
+                    identifying characteristics before it is used or stored (known as
+                    <em>de-identified before first use</em> or
+                    <em>de-identified on device</em>), for example by blurring faces using
+                    <a href="https://en.wikipedia.org/wiki/Computer_vision"
+                      >computer vision</a
+                    >. Find out more about
+                    <a href="https://en.wikipedia.org/wiki/De-identification"
+                      >de-identification</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/tech/blue/image.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>De-identified Image</td>
+                  <td>
+                    Collects
+                    <a href="https://en.wikipedia.org/wiki/Image#Characteristics"
+                      >still images</a
+                    >
+                    of a sufficient resolution where individuals can be identified, for
+                    example by capturing images of faces or unique numbers such as vehicle
+                    license plates. However, images are processed in a way that removes
+                    identifying characteristics before it is used or stored (known as
+                    <em>de-identified before first use</em> or
+                    <em>de-identified on device</em>), for example by blurring faces using
+                    <a href="https://en.wikipedia.org/wiki/Computer_vision"
+                      >computer vision</a
+                    >. Find out more about
+                    <a href="https://en.wikipedia.org/wiki/De-identification"
+                      >de-identification</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/tech/blue/voice.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>De-identified Voice</td>
+                  <td>
+                    Audio data is collected that does or can identify individuals, either
+                    through manual review or technologies that can determine either what is
+                    being said, or who is saying it. Find out more about
+                    <a href="https://en.wikipedia.org/wiki/Speech_recognition"
+                      >speech recognition</a
+                    >
+                    or
+                    <a href="https://en.wikipedia.org/wiki/Speaker_recognition"
+                      >speaker recognition</a
+                    >. Data is processed in a way that removes identifying characteristics
+                    before it is used or stored (known as
+                    <em>de-identified before first use</em> or
+                    <em>de-identified on device</em>). Find out more
+                    <a href="https://en.wikipedia.org/wiki/De-identification">here</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="section-taxonomy-data_type" class="step taxonomy-step" data-step="section-taxonomy-data_type">
+      <div class="sticky-section-header green">
+        <%=
+        require("ejs-loader!./templates/section-divider.ejs")({
+          section:"Data Type",
+          title: "Data Type",
+          icon:"circle-icon-category",
+        }) %>
+      </div>
+      <div class="container taxonomy-container">
+        <div class="row">
+          <div class="col taxonomy-seemore"><div class="btn-seemore">SEE MORE</div></div>
+        </div>
+        <div class="row">
+          <div class="col">
+            
+            <table class="table table-taxonomy">
+              <thead>
+                <tr>
+                  <th>Icon</th>
+                  <th>Technology</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/data/values.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Values / Time</td>
+                  <td>
+                    Measurements that are collected at regular intervals over a period of
+                    time. For example see [time series data] (<a
+                      href="https://en.wikipedia.org/wiki/Time_series"
+                      >https://en.wikipedia.org/wiki/Time_series</a
+                    >).
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/data/pixels.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Pixel-based Image</td>
+                  <td>
+                    A digital image is composed of a grid of individual pixels. Find out
+                    more at [digital image] (<a
+                      href="https://en.wikipedia.org/wiki/Digital_image"
+                      >https://en.wikipedia.org/wiki/Digital_image</a
+                    >)
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/data/boolean.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Boolean</td>
+                  <td>
+                    Data that has one of two data values, for example true and false. Find
+                    out more [here] (<a
+                      href="https://en.wikipedia.org/wiki/Boolean_data_type"
+                      >https://en.wikipedia.org/wiki/Boolean_data_type</a
+                    >)
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/data/table.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Tabular</td>
+                  <td>
+                    Data that is stored in a table, where values are stored in rows and
+                    columns. More [here] (<a
+                      href="https://en.wikipedia.org/wiki/Table_(information"
+                      >https://en.wikipedia.org/wiki/Table_(information</a
+                    >))
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/data/spatial.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Spatial</td>
+                  <td>
+                    Data that represents a location, such as an address, a place name or
+                    geographic coordinates; or a structure, such as a floorplan. Find out
+                    more about [geospatial data] (<a
+                      href="https://en.wikipedia.org/wiki/Geographic_data_and_information"
+                      >https://en.wikipedia.org/wiki/Geographic_data_and_information</a
+                    >) and [building information models] (<a
+                      href="https://en.wikipedia.org/wiki/Building_information_modeling"
+                      >https://en.wikipedia.org/wiki/Building_information_modeling</a
+                    >)
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/data/binary.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Binary</td>
+                  <td>
+                    Compressed data into a binary format. Find out more [here] (<a
+                      href="https://en.wikipedia.org/wiki/Binary_file"
+                      >https://en.wikipedia.org/wiki/Binary_file</a
+                    >)
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="section-taxonomy-processing" class="step taxonomy-step" data-step="section-taxonomy-processing">
+      <div class="sticky-section-header green">
+        <%=
+        require("ejs-loader!./templates/section-divider.ejs")({
+          section:"Processing",
+          title: "Processing",
+          icon:"circle-icon-category",
+        }) %>
+      </div>
+      <div class="container taxonomy-container">
+        <div class="row">
+          <div class="col taxonomy-seemore"><div class="btn-seemore">SEE MORE</div></div>
+        </div>
+        <div class="row">
+          <div class="col">
+            
+            <table class="table table-taxonomy">
+              <thead>
+                <tr>
+                  <th>Icon</th>
+                  <th>Technology</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/process/rdua.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>RDUA Approved</td>
+                  <td>
+                    Data activity has undergone a Responsible Data Use Assessment and
+                    determined to provide a net benefit. The RDUA is a process that Sidewalk
+                    Labs conducts prior to the start of any data activity.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/process/rdua.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Reviewed Internally</td>
+                  <td>
+                    &quot;Many organizations have internal review processes that consider
+                    the potential benefits, risks and implications for privacy for new
+                    technologies or data collection activities. For example, in Canada,
+                    Privacy Impact Assessments are often conducted by organizations prior to
+                    the beginning for a project - find out more [here] (<a
+                      href="https://en.wikipedia.org/wiki/Privacy_Impact_Assessment"
+                      >https://en.wikipedia.org/wiki/Privacy_Impact_Assessment</a
+                    >).
+                    <em
+                      >This could be customized with the details of the accountable entity
+                      responsible for these instances of technology in the public realm</em
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/process/encrypted.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Encrypted</td>
+                  <td>
+                    Data has been encoded so that only authorized parties can access it,
+                    which can reduce risk related to handling private or sensitive
+                    information. Find out more [here] (<a
+                      href="https://en.wikipedia.org/wiki/Encryption"
+                      >https://en.wikipedia.org/wiki/Encryption</a
+                    >)
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/process/aggregated.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Aggregated</td>
+                  <td>
+                    &quot;Data that has been grouped or summarized from individual
+                    measurements, for example to count up totals or to calculate an average.
+                    Find out more [here] (<a
+                      href="https://en.wikipedia.org/wiki/Aggregate_data"
+                      >https://en.wikipedia.org/wiki/Aggregate_data</a
+                    >)
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/process/raw.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Raw data</td>
+                  <td>
+                    &quot;Data that has not been processed or altered from the point of
+                    collection - the data is effectively identical to how it was gathered
+                    from the original data source. Find out more [here] (<a
+                      href="https://en.wikipedia.org/wiki/Raw_data"
+                      >https://en.wikipedia.org/wiki/Raw_data</a
+                    >)
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/process/regulated.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Regulated</td>
+                  <td>
+                    Depending on the jurisdiction and type of data, data is regulated in
+                    various ways. For example, Personal Information in Canada is regulated
+                    by federal, provincial, and municipal laws. The collection, use and
+                    disclosure of Personal Information by private companies in Ontario is
+                    regulated by the [Personal Information Protection and Electronic
+                    Documents Act] (<a
+                      href="https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/"
+                      >https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/</a
+                    >)
+                    <em
+                      >This should be customized for the jurisdiction where this digital
+                      channel is being used</em
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/process/ai.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>AI System</td>
+                  <td>
+                    Data that is processed by automated, algorithmic or artificial
+                    intelligence systems to derive a new result or data point. Find out more
+                    about [automated] (<a
+                      href="https://en.wikipedia.org/wiki/Automated_decision_support"
+                      >https://en.wikipedia.org/wiki/Automated_decision_support</a
+                    >), [algorithmic] (<a href="https://en.wikipedia.org/wiki/Algorithm"
+                      >https://en.wikipedia.org/wiki/Algorithm</a
+                    >) and [artificial intelligence] (<a
+                      href="https://en.wikipedia.org/wiki/Artificial_intelligence"
+                      >https://en.wikipedia.org/wiki/Artificial_intelligence</a
+                    >) systems.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/process/deidentified.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>De-identified</td>
+                  <td>
+                    Data that is processed to remove identifying values, usually to protect
+                    privacy. De-identification can happen at any point in a data collection
+                    process, for example before it is stored in a database, or before it is
+                    published. Here we define it to mean after the data has already left a
+                    hardware device, or after it has been stored in a database. Find out
+                    more [here] (<a href="https://en.wikipedia.org/wiki/De-identification"
+                      >https://en.wikipedia.org/wiki/De-identification</a
+                    >)
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="section-taxonomy-access" class="step taxonomy-step" data-step="section-taxonomy-access">
+      <div class="sticky-section-header green">
+        <%=
+        require("ejs-loader!./templates/section-divider.ejs")({
+          section:"Access",
+          title: "Access",
+          icon:"circle-icon-category",
+        }) %>
+      </div>
+      <div class="container taxonomy-container">
+        <div class="row">
+          <div class="col taxonomy-seemore"><div class="btn-seemore">SEE MORE</div></div>
+        </div>
+        <div class="row">
+          <div class="col">
+            
+            <table class="table table-taxonomy">
+              <thead>
+                <tr>
+                  <th>Icon</th>
+                  <th>Technology</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/access/download.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Available to download</td>
+                  <td>
+                    Data that can be accessed and downloaded online, either for free or for
+                    a fee
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/access/3rdparty.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Available to 3rd parties</td>
+                  <td>
+                    Data is available to 3rd parties not involved in the data activity. This
+                    does not always mean that data is being resold.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/access/yes.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Available to me</td>
+                  <td>
+                    Available to me but not to other individuals. For example, as an
+                    individual you have access to all your electronic toll records for your
+                    car, but other individuals do not have access to that.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/access/no.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Not available to me</td>
+                  <td>
+                    Not available to me or other individuals. As an individual, there
+                    isn&#39;t a way for you to access this data.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/access/resale.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Available for resale</td>
+                  <td>The data collected may be resold to other 3rd parties</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/access/no.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Not available to the accountable organization</td>
+                  <td>
+                    Data is not available to the accountable organization
+                    <em>this can be customized</em>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/access/no.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Not available to vendor</td>
+                  <td>
+                    Data is not available to the data collection or technology provider
+                    <em>this can be customized</em>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/access/yes.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Available to the accountable organization</td>
+                  <td>
+                    Data is available to the accountable organization
+                    <em>this can be customized</em>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/access/yes.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Available to vendor</td>
+                  <td>
+                    Data is available to the data collection or technology provider
+                    <em>this can be customized</em>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="section-taxonomy-storage" class="step taxonomy-step" data-step="section-taxonomy-storage">
+      <div class="sticky-section-header green">
+        <%=
+        require("ejs-loader!./templates/section-divider.ejs")({
+          section:"Storage",
+          title: "Storage",
+          icon:"circle-icon-category",
+        }) %>
+      </div>
+      <div class="container taxonomy-container">
+        <div class="row">
+          <div class="col taxonomy-seemore"><div class="btn-seemore">SEE MORE</div></div>
+        </div>
+        <div class="row">
+          <div class="col">
+            
+            <table class="table table-taxonomy">
+              <thead>
+                <tr>
+                  <th>Icon</th>
+                  <th>Technology</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><img
+                    src="https://dtpr.sidewalklabs.com/dtpr_icons/storage/cloud.svg"
+                    alt=""
+                  /></td>
+                  <td>Stored on 3rd Party Cloud</td>
+                  <td>
+                    Data is stored on behalf of the organization or the data collector in an
+                    off-site data centre, such as Amazon Web Services, Google Cloud and
+                    Microsoft Azure
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/retention/no.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>No data retained</td>
+                  <td>No data is kept or stored</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/retention/yes.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Retained 24 hours</td>
+                  <td>
+                    Data is stored for 24 hours, and after this time period is deleted
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/retention/yes.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Retained 1 month</td>
+                  <td>Data is stored for 1 month, and after this time period is deleted</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/retention/yes.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Retained 3 months</td>
+                  <td>
+                    Data is stored for 3 months, and after this time period is deleted
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/retention/yes.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Retained for <em>time period</em></td>
+                  <td>
+                    Data is stored for <em>a customized time period</em>, and after this
+                    time period is deleted
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/retention/yes.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Retained 1 year</td>
+                  <td>Data is stored for 1 year, and after this time period is deleted</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/retention/yes.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Retained 5 years</td>
+                  <td>Data is stored for 5 years, and after this time period is deleted</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/retention/yes.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Retained indefinitely</td>
+                  <td>Data is retained indefinitely</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/storage/cloud.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Stored locally</td>
+                  <td>
+                    Data is stored in the jurisdiction where it was collected. Find out more
+                    [here] (<a href="https://en.wikipedia.org/wiki/Data_sovereignty"
+                      >https://en.wikipedia.org/wiki/Data_sovereignty</a
+                    >)
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/storage/cloud.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Stored primarily locally</td>
+                  <td>
+                    Data is stored mainly in the jurisdiction where it was collected. Find
+                    out more [here] (<a
+                      href="https://en.wikipedia.org/wiki/Data_sovereignty"
+                      >https://en.wikipedia.org/wiki/Data_sovereignty</a
+                    >)
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/storage/cloud.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Stored primarily internationally</td>
+                  <td>
+                    Data is stored outside the jurisdiction where it was collected. Find out
+                    more [here] (<a href="https://en.wikipedia.org/wiki/Data_sovereignty"
+                      >https://en.wikipedia.org/wiki/Data_sovereignty</a
+                    >)
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/storage/cloud.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Backed up locally</td>
+                  <td>
+                    Data is backed up with the jurisdiction where it was collected. Find out
+                    more [here] (<a href="https://en.wikipedia.org/wiki/Data_sovereignty"
+                      >https://en.wikipedia.org/wiki/Data_sovereignty</a
+                    >)
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="https://dtpr.sidewalklabs.com/dtpr_icons/storage/cloud.svg"
+                      alt=""
+                    />
+                  </td>
+                  <td>Backed up internationally</td>
+                  <td>
+                    Data is backed up outside the jurisdiction where it was collected. Find
+                    out more [here] (<a
+                      href="https://en.wikipedia.org/wiki/Data_sovereignty"
+                      >https://en.wikipedia.org/wiki/Data_sovereignty</a
+                    >)
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+
+    <div id="sticky-prototype">
+        
+        
+      <div class="prototype-content">
+        
+        <div class="prototype-conversation">
+          <img src="images/prototype/scenario-1a@2x.png" id="pcard-scenario-1a" class="prototype-card" data-prototype-step="scenario-1a" width="375" />
+          <img src="images/prototype/scenario-1b@2x.png" id="pcard-scenario-1b" class="prototype-card" data-prototype-step="scenario-1b" width="375" />
+          <img src="images/prototype/scenario-1c@2x.png" id="pcard-scenario-1c" class="prototype-card" data-prototype-step="scenario-1c" width="375" />
+          <img src="images/prototype/scenario-1d@2x.png" id="pcard-scenario-1d" class="prototype-card" data-prototype-step="scenario-1d" width="375" />
+
+          <img src="images/prototype/scenario-2a@2x.png" id="pcard-scenario-2a" class="prototype-card" data-prototype-step="scenario-2a" width="375" />
+          <img src="images/prototype/scenario-2b@2x.png" id="pcard-scenario-2b" class="prototype-card" data-prototype-step="scenario-2b" width="375" />
+          <img src="images/prototype/scenario-2d@2x.png" id="pcard-scenario-2d" class="prototype-card" data-prototype-step="scenario-2d" width="375" />
+
+          <img src="images/prototype/scenario-3a@2x.png" id="pcard-scenario-3a" class="prototype-card" data-prototype-step="scenario-3a" width="375" />
+          <img src="images/prototype/scenario-3b@2x.png" id="pcard-scenario-3b" class="prototype-card" data-prototype-step="scenario-3b" width="375" />
+          <img src="images/prototype/scenario-3c@2x.png" id="pcard-scenario-3c" class="prototype-card" data-prototype-step="scenario-3c" width="375" />
+          <img src="images/prototype/scenario-3d@2x.png" id="pcard-scenario-3d" class="prototype-card" data-prototype-step="scenario-3d" width="375" />
+          
+          <img src="images/prototype/scenario-4a@2x.png" id="pcard-scenario-4a" class="prototype-card" data-prototype-step="scenario-4a" width="375" />
+          <img src="images/prototype/scenario-4b@2x.png" id="pcard-scenario-4b" class="prototype-card" data-prototype-step="scenario-4b" width="375" />
+          <img src="images/prototype/scenario-4c@2x.png" id="pcard-scenario-4c" class="prototype-card" data-prototype-step="scenario-4c" width="375" />
+          <img src="images/prototype/scenario-4d@2x.png" id="pcard-scenario-4d" class="prototype-card" data-prototype-step="scenario-4d" width="375" />
+          
+          <img src="images/prototype/scenario-5a@2x.png" id="pcard-scenario-5a" class="prototype-card" data-prototype-step="scenario-5a" width="375" />
+          <img src="images/prototype/scenario-5b@2x.png" id="pcard-scenario-5b" class="prototype-card" data-prototype-step="scenario-5b" width="375" />
+          <img src="images/prototype/scenario-5c@2x.png" id="pcard-scenario-5c" class="prototype-card" data-prototype-step="scenario-5c" width="375" />
+          <img src="images/prototype/scenario-5d@2x.png" id="pcard-scenario-5d" class="prototype-card" data-prototype-step="scenario-5d" width="375" />
+
+          <img src="images/prototype/scenario-6a@2x.png" id="pcard-scenario-6a" class="prototype-card" data-prototype-step="scenario-6a" width="375" />
+          <img src="images/prototype/scenario-6b@2x.png" id="pcard-scenario-6b" class="prototype-card" data-prototype-step="scenario-6b" width="375" />
+          <img src="images/prototype/scenario-6c@2x.png" id="pcard-scenario-6c" class="prototype-card" data-prototype-step="scenario-6c" width="375" />
+          <img src="images/prototype/scenario-6d@2x.png" id="pcard-scenario-6d" class="prototype-card" data-prototype-step="scenario-6d" width="375" />
+
+          <img src="images/prototype/scenario-7a@2x.png" id="pcard-scenario-7a" class="prototype-card" data-prototype-step="scenario-7a" width="375" />
+          <img src="images/prototype/scenario-7b@2x.png" id="pcard-scenario-7b" class="prototype-card" data-prototype-step="scenario-7b" width="375" />
+          <img src="images/prototype/scenario-7c@2x.png" id="pcard-scenario-7c" class="prototype-card" data-prototype-step="scenario-7c" width="375" />
+          <img src="images/prototype/scenario-7d@2x.png" id="pcard-scenario-7d" class="prototype-card" data-prototype-step="scenario-7d" width="375" />
+        </div>
+        <div class="prototype-modal">
+          <img src="images/prototype/description--scenario-1a@2x.png" class="data-chain" id="datachain-scenario-1a" width="375" />
+          <img src="images/prototype/description--scenario-1b@2x.png" class="data-chain" id="datachain-scenario-1b" width="375" />
+          <img src="images/prototype/description--scenario-1c@2x.png" class="data-chain" id="datachain-scenario-1c" width="375" />
+          <img src="images/prototype/description--scenario-1d@2x.png" class="data-chain" id="datachain-scenario-1d" width="375" />
+
+          <img src="images/prototype/description--scenario-2a@2x.png" class="data-chain" id="datachain-scenario-2a" width="375" />
+          <img src="images/prototype/description--scenario-2b@2x.png" class="data-chain" id="datachain-scenario-2b" width="375" />
+          <img src="images/prototype/description--scenario-2d@2x.png" class="data-chain" id="datachain-scenario-2d" width="375" />
+
+          <img src="images/prototype/description--scenario-3a@2x.png" class="data-chain" id="datachain-scenario-3a" width="375" />
+          <img src="images/prototype/description--scenario-3c@2x.png" class="data-chain" id="datachain-scenario-3c" width="375" />
+          <img src="images/prototype/description--scenario-3d@2x.png" class="data-chain" id="datachain-scenario-3d" width="375" />
+          
+          <img src="images/prototype/description--scenario-4a@2x.png" class="data-chain" id="datachain-scenario-4a" width="375" />
+          <img src="images/prototype/description--scenario-4a-2@2x.png" class="data-chain" id="datachain-scenario-4a-2" width="375" />
+          <img src="images/prototype/description--scenario-4b@2x.png" class="data-chain" id="datachain-scenario-4b" width="375" />
+          <img src="images/prototype/description--scenario-4c@2x.png" class="data-chain" id="datachain-scenario-4c" width="375" />
+          <img src="images/prototype/description--scenario-4d@2x.png" class="data-chain" id="datachain-scenario-4d" width="375" />
+          
+          <img src="images/prototype/description--scenario-5a@2x.png" class="data-chain" id="datachain-scenario-5a" width="375" />
+          <img src="images/prototype/description--scenario-5b@2x.png" class="data-chain" id="datachain-scenario-5b" width="375" />
+          <img src="images/prototype/description--scenario-5b-2@2x.png" class="data-chain" id="datachain-scenario-5b-2" width="375" />
+          <img src="images/prototype/description--scenario-5c@2x.png" class="data-chain" id="datachain-scenario-5c" width="375" />
+          <img src="images/prototype/description--scenario-5d@2x.png" class="data-chain" id="datachain-scenario-5d" width="375" />
+
+          <img src="images/prototype/description--scenario-6a@2x.png" class="data-chain" id="datachain-scenario-6a" width="375" />
+          <img src="images/prototype/description--scenario-6b@2x.png" class="data-chain" id="datachain-scenario-6b" width="375" />
+          <img src="images/prototype/description--scenario-6d@2x.png" class="data-chain" id="datachain-scenario-6d" width="375" />
+
+          <img src="images/prototype/description--scenario-7a@2x.png" class="data-chain" id="datachain-scenario-7a" width="375" />
+          <img src="images/prototype/description--scenario-7b@2x.png" class="data-chain" id="datachain-scenario-7b" width="375" />
+          <img src="images/prototype/description--scenario-7c@2x.png" class="data-chain" id="datachain-scenario-7c" width="375" />
+          <img src="images/prototype/description--scenario-7d@2x.png" class="data-chain" id="datachain-scenario-7d" width="375" />
+        </div>
+      </div>
+    
+      <!-- <div class="prototype-loader">
+        <button type="button" class="btn btn-primary mx-auto" >Load Prototype</button>
+      </div>
+      <div class="prototype-container">
+          <div class="prototype-figma-border"></div>
+          <iframe 
+          data-src="" 
+          src="" 
+          allowfullscreen
+          ></iframe>
+          <iframe
+          data-src=""
+          src=""
+          allowfullscreen
+        ></iframe>
+
+      </div> -->
+    </div>
+
+    <!-- SECTION PAI -->
+    <div id="section-vision" class="step" data-step="section-vision">
+      <div class="sticky-section-header">
+        <%=
+        require("ejs-loader!./templates/section-divider.ejs")({
+          section:"Vision",
+          title: "A Vision",
+          icon:"circle-icon-lock",
+        }) %>
+      </div>
+      <div class="section-image" style="background-image: url(images/Vision_Map.png);"></div>
+
+      <!-- VISION INTRO -->
+      <% var stepData =[ 
+      {image:"images/Vision_Chapter_Image_1.svg", title:"Grab a book", description:"move seamlessly through places we love, and seamfully in places new to us?" }, 
+      { image:"images/Vision_Chapter_Image_2.svg", title:"A new look", description:"understand how sensors work, and what they do for people?" }, 
+      { image:"images/Vision_Chapter_Image_3.svg", title:"Stop to listen", description:"look up from our phones, and strengthen the social fabric?" }, 
+      { image:"images/Vision_Chapter_Image_4.svg", title:"A table for two", description:"gain agency over technology, and enhance our experiences of a place?" }, 
+      { image:"images/Vision_Chapter_Image_5.svg", title:"Recycle, recall", description:"get help from the built environment, and leave it better than we found it?" }, 
+      { image:"images/Vision_Chapter_Image_6.svg", title:"Lost & Found", description:"offer eyes on the street, with humans in the loop?" }, 
+      { image:"images/Vision_Chapter_Image_7.svg", title:"Head home", description:"offer time-bound data sharing with ongoing control of choices?" }, 
+      ]; 
+      %>
+
+      <div class="container pt-1 scenarios-toc">
+        <%= require("ejs-loader!./templates/vision-intro.ejs")({
+          prehead:"A Vision", 
+          title:"Join us on journey that rejects the false dichotomy between privacy & convenience.", 
+          lead:"Out of the co-design sessions in early 2020 came an ask to envision how the standard might work in 5 years. Excitement built for the prospect of a personal AI assistant. This would be provided by an organization you trust. Your assistant knows your preferences and is ready to help.",
+          features:stepData,
+        })%>
+      </div>
+    </div>
+    <div id="section-agent" class="step" data-step="section-agent">
+      <div class="sticky-section-header">
+        <%=
+        require("ejs-loader!./templates/section-divider.ejs")({
+          section:"Vision",
+          title: "Your Digital Personal Assistant",
+          icon:"circle-icon-support_agent",
+        }) %>
+      </div>
+      <div class="container pt-4 pb-4">
+        <%= require("ejs-loader!./templates/vision-pai.ejs")({
+          section:"part 1", 
+          title: "First, choose<br /> your agent", 
+          lead: "In you're everyday life, you exchange data with a companies, apps, shops, and people. Everyone has different levels of comfort sharing data depending on the situation. We believe control for people can improve comfort. To ensure you maintain control of your data, these scenarios imagine a world where everyone has their own digital personal assistant.", 
+          buttons: [
+            { label: "Skip to the prototype", classes: "btn-primary",link:"section-scenario-1" },
+          ],
+          options: [
+            { icon:"location_city", title: "Government", label: "Offered by your national, regional or local government" },
+            { icon:"local_library", title: "Library Dept.", label: "Provided by your library" },
+            { icon:"account_balance", title: "Bank Co.", label: "An offering associated with your bank account" },
+            { icon:"local_phone", title: "Phone Co.", label: "An account provided by your phone provider" },
+            { icon:"help", title: "Other...", label: "Who would you trust to help?" },
+          ],
+        }) %>
+      </div>
+    </div>
+    
+    <!-- SECTION 1 -->
+    <% 
+      var currentFrame = 0;
+      var currentIndex = 0;
+      var currentStepData = stepData[currentIndex];
+    %>
+    <div id="section-scenario-1" class="step" data-step="section-scenario-1">
+      <div class="sticky-section-header">
+        <%= require("ejs-loader!./templates/section-divider.ejs")({
+          section:"Places<br />", 
+          title: currentStepData.title, 
+          icon:"number-icon-"+(currentIndex+1),
+        }) %>
+      </div>
+      <div class="step-banner">
+        <div class="container">
+          <%= require("ejs-loader!./templates/step-header.ejs")({ 
+            title: currentStepData.description, 
+            lead: "A standardised way to describe the systems, sensors, and technologies in a given area.", 
+            image:"images/Vision_Chapter_Image_1.svg",
+            stepNumber:currentIndex+1,
+            seal: "Seal_Place.png", 
+            buttons: [
+              { title: "titl", label: "Start the journey", classes: "btn-primary" },
+              { title: "titl", label: "Skip to the prototype", classes: "btn-secondary" },
+              { title: "titl", label: "See an example definition", classes: "btn-secondary" },
+            ], 
+            features: [ 
+              { title: "Place descriptions", label: "label", icon: "hex-icon-map", description: "Publishing place definitions allows people to know what functionality is available in a given place." }, 
+              { title: "Ambient interactions", label: "label", icon: "hex-icon-power", description: "Rather than relying on a single app, an interoperable API ensures many channels of access." }, 
+              { title: "Trusted assistant", label: "label", icon: "hex-icon-receipt", description: "Each personal interaction that is digitally recorded is able to be audited and edited by that person." }, 
+              { title: "Zone-based notice",label: "label", icon: "hex-icon-place", description: "Alerts can be set based on geographic areas and a person’s familiarity with that place." }, 
+            ], 
+          }) %>
+        </div>
+      </div>
+      <div>
+        <%= require("ejs-loader!./templates/step-holder.ejs")({
+          contentLeft:false,
+          prototypeType:"framer",
+          prototypeUrl:"framer://bikedock", 
+          sign:["face","hex-icon-face","dtpr_icons/tech/air.svg","dtpr_icons/tech/air.svg"],
+          title:"Dock your bike",
+          description:"Arriving at your destination, you dock your bike, and your session is ended. The trip is credited to your monthly membership.",
+          image:"images/Frame_Subject.svg",
+          frame:"images/Frame_Background.png",
+          sign:["dtpr_icons/purpose/mobility.svg","dtpr_icons/tech/wave.svg","hex-icon-room_service","hex-icon-favorite"],
+          features: [ 
+            { title: "The purpose of this system is", icon: "dtpr_icons/purpose/mobility.svg", description: "Mobility" }, 
+            { title: "The service is provided by", icon: "hex-icon-pedal_bike", description: orgBike }, 
+            { title: "The technology is", icon: "dtpr_icons/tech/yellow/wave.svg", description: "Bikeshare ID" }, 
+            { title: "The interaction mode is", icon: "hex-icon-directions_walking", description: "Hands free" }, 
+            { title: "The relationship is", icon: "hex-icon-favorite", description: "Membership" },
+          ],
+          index:currentIndex,
+          frame:currentFrame,
+        }) %>
+        <% 
+          currentFrame++;
+        %>
+      </div>
+      <div>
+        <%= require("ejs-loader!./templates/step-holder.ejs")({
+          contentLeft:true,
+          prototypeType:"framer",
+          prototypeUrl:"https://framer.com/share/Step1-ghD2K7KlMUDR3jc4Am7m/UXM1Lab84",
+          
+          title:"Enter the plaza",
+          description:"As you enter the plaza, you are given a link to a chatbot and can ask any questions you have about this place.",
+          image:"images/Frame_Subject.svg",
+          frame:"images/Frame_Background.png",
+          sign:["dtpr_icons/purpose/water.svg","dtpr_icons/tech/light.svg","hex-icon-room_service","hex-icon-favorite"],
+          features: [ 
+            { title: "The purpose of this system is", icon: "dtpr_icons/purpose/agency.svg", description: "Agency" }, 
+            { title: "The service is provided by", icon: "hex-icon-location_city", description: orgNeighbourhood }, 
+            { title: "The technology is", icon: "dtpr-logo-Outline", description: "DTPR API" }, 
+            { title: "The interaction mode is", icon: "hex-icon-smartphone", description: "Personal Device" }, 
+            { title: "The relationship is", icon: "hex-icon-meeting_room", description: "Visit" },
+          ],
+          index:currentIndex,
+          frame:currentFrame,
+        }) %>
+        <% 
+          currentFrame++;
+        %>
+      </div>
+      <div>
+        <%= require("ejs-loader!./templates/step-holder.ejs")({
+          contentLeft:false,
+          prototypeType:"dialogflow",
+          prototypeUrl:"https://dtpr.sidewalklabs.com/dtpr_chatbot/place.html", 
+          sign:["face","hex-icon-face","dtpr_icons/tech/air.svg","dtpr_icons/tech/air.svg"],
+          title:"Grab a book",
+          description:"You grab a book off the shelf and its added to your virtual cart. You can set these preferences with your personal AI.",
+          image:"images/Frame_Subject.svg",
+          frame:"images/Frame_Background.png",
+          sign:["dtpr_icons/purpose/water.svg","dtpr_icons/tech/light.svg","hex-icon-room_service","hex-icon-favorite"],
+          features: [ 
+            { title: "The purpose of this system is", icon: "dtpr_icons/purpose/agency.svg", description: "Borrowing" }, 
+            { title: "The service is provided by", icon: "hex-icon-local_library", description: orgLibrary }, 
+            { title: "The technology is", icon: "dtpr_icons/tech/yellow/video.svg", description: "Computer Vision" }, 
+            { title: "The interaction mode is", icon: "hex-icon-shopping_basket", description: "Grab and Go" }, 
+            { title: "The relationship is", icon: "hex-icon-favorite", description: "Membership" },
+          ],
+          index:currentIndex,
+          frame:currentFrame,
+        }) %>
+        <% 
+          currentFrame++;
+        %>
+      </div>
+      <div>
+        <%= require("ejs-loader!./templates/step-holder.ejs")({
+          contentLeft:true,
+          prototypeType:"framer",
+          prototypeUrl:"https://framer.com/share/Step1-ghD2K7KlMUDR3jc4Am7m/UXM1Lab84",
+          
+          title:"Head out to the street",
+          description:"As you leave, the book is checked out with your library card. You continue to the street - you know you can examine the transaction later.",
+          image:"images/Frame_Subject.svg",
+          frame:"images/Frame_Background.png",
+          sign:["dtpr_icons/purpose/water.svg","dtpr_icons/tech/light.svg","hex-icon-room_service","hex-icon-favorite"],
+          features: [ 
+            { title: "The purpose of this system is", icon: "dtpr_icons/purpose/water.svg", description: "Borrowing" }, 
+            { title: "The service is provided by", icon: "dtpr_icons/tech/light.svg", description: orgLibrary }, 
+            { title: "The user’s interface is ", icon: "hex-icon-room_service", description: "Personal AI" }, 
+            { title: "The relationship is", icon: "hex-icon-favorite", description: "Membership" }, 
+          ],
+          index:currentIndex,
+          frame:currentFrame,
+        }) %>
+        <% 
+          currentFrame++;
+        %>
+      </div>
+      <div class="step-footer">
+        <div class="container">
+          <%= require("ejs-loader!./templates/step-footer.ejs")({ 
+            description: "In this scenario we learned about how a personal AI could interact with places, if the systems, sensors, and technologies in a given area were described in a standardised way.", 
+            features: [ 
+              { title: "Place descriptions", label: "label", icon: "hex-icon-map", description: "Publishing place definitions allows people to know what functionality is available in a given place." }, 
+              { title: "Ambient interactions", label: "label", icon: "hex-icon-directions_walking", description: "Rather than relying on a single app, an interoperable API ensures many channels of access." }, 
+              { title: "Trusted assistant", label: "label", icon: "hex-icon-room_service", description: "Each personal interaction that is digitally recorded is able to be audited and edited by that person." }, 
+              { title: "Zone-based notice",label: "label", icon: "hex-icon-place", description: "Alerts can be set based on geographic areas and a person’s familiarity with that place." }, 
+            ], 
+          }) %>
+        </div>
+      </div>
+    </div>
+    <!-- / SECTION 1 -->
+
+    <!-- SECTION 2 -->
+    <% 
+      var currentIndex = 1;
+      var currentFrame = 0;
+      var currentStepData = stepData[currentIndex];
+    %>
+    <div id="section-scenario-2" class="step" data-step="section-scenario-2">
+      <div class="sticky-section-header">
+        <%= require("ejs-loader!./templates/section-divider.ejs")({
+          section:"Sensors", 
+          title: currentStepData.title, 
+          icon:"number-icon-"+(currentIndex+1),
+        }) %>
+      </div>
+      <div class="step-banner">
+        <div class="container">
+          <%= require("ejs-loader!./templates/step-header.ejs")({ 
+            title: currentStepData.description, 
+            lead: "A standardised way to describe sensors and convey what kind of processing they're performing.", 
+            image:"images/Vision_Chapter_Image_2.svg",
+            stepNumber:currentIndex+1,
+            seal: "Seal_Sensor.png", 
+            buttons: [
+              { title: "titl", label: "Start the journey", classes: "btn-primary" },
+              { title: "titl", label: "Skip to the prototype", classes: "btn-secondary" },
+              { title: "titl", label: "See an example definition", classes: "btn-secondary" },
+            ], 
+            features: [ 
+              { title: "Agency for people", label: "label", icon: "hex-icon-accessibility_new", description: "Publishing place definitions allows people to know what functionality is available in a given place." }, 
+              { title: "Interoperable access", label: "label", icon: "hex-icon-power", description: "Rather than relying on a single app, an interoperable API ensures many channels of access." }, 
+              { title: "Data exchange receipts", label: "label", icon: "hex-icon-receipt", description: "Each personal interaction that is digitally recorded is able to be audited and edited by that person." }, 
+              { title: "Zone-based notice",label: "label", icon: "hex-icon-place", description: "Alerts can be set based on geographic areas and a person’s familiarity with that place." }, 
+            ], 
+          }) %>
+        </div>
+      </div>
+      <div>
+        <%= require("ejs-loader!./templates/step-holder.ejs")({
+          contentLeft:false,
+          prototypeType:"dialogflow",
+          prototypeUrl:"https://dtpr.sidewalklabs.com/dtpr_chatbot/place.html", 
+          sign:["face","hex-icon-face","dtpr_icons/tech/air.svg","dtpr_icons/tech/air.svg"],
+          title:"Enter the shop",
+          description:"You enter a new local shop and are able to connect in the way you choose.",
+          image:"images/Frame_Subject.svg",
+          frame:"images/Frame_Background.png",
+          sign:["dtpr_icons/purpose/water.svg","dtpr_icons/tech/light.svg","hex-icon-room_service","hex-icon-favorite"],
+          features: [ 
+            { title: "The purpose of this system is", icon: "dtpr_icons/purpose/agency.svg", description: "Agency" }, 
+            { title: "The service is provided by", icon: "hex-icon-storefront", description: orgStore }, 
+            { title: "The technology is", icon: "dtpr-logo-Black", description: "DTPR API" }, 
+            { title: "The interaction mode is", icon: "hex-icon-smartphone", description: "Personal Device" }, 
+            { title: "The relationship is", icon: "hex-icon-meeting_room", description: "Temporary" },
+          ],
+          index:currentIndex,
+          frame:currentFrame,
+        }) %>
+        <% 
+          currentFrame++;
+        %>
+      </div>
+      <div>
+        <%= require("ejs-loader!./templates/step-holder.ejs")({
+          contentLeft:true,
+          prototypeType:"framer",
+          prototypeUrl:"https://framer.com/share/Step1-ghD2K7KlMUDR3jc4Am7m/UXM1Lab84",
+          
+          title:"Stand in front of mirror",
+          description:"You stand in front of the mirror. You see an option to connect and try on clothes virtually.",
+          image:"images/Frame_Subject.svg",
+          frame:"images/Frame_Background.png",
+          sign:["dtpr_icons/purpose/water.svg","dtpr_icons/tech/light.svg","hex-icon-room_service","hex-icon-favorite"],
+          features: [ 
+            { title: "The purpose of this system is", icon: "dtpr_icons/purpose/agency.svg", description: "Agency" }, 
+            { title: "The service is provided by", icon: "hex-icon-storefront", description: orgStore }, 
+            { title: "The technology is", icon: "dtpr_icons/tech/blue/video.svg", description: "Computer Vision" }, 
+            { title: "The interaction mode is", icon: "hex-icon-portrait", description: "Magic Mirror" }, 
+            { title: "The relationship is", icon: "hex-icon-meeting_room", description: "Temporary" },
+          ],
+          index:currentIndex,
+          frame:currentFrame,
+        }) %>
+        <% 
+          currentFrame++;
+        %>
+      </div>
+      <div>
+        <%= require("ejs-loader!./templates/step-holder.ejs")({
+          contentLeft:false,
+          prototypeType:"dialogflow",
+          prototypeUrl:"https://dtpr.sidewalklabs.com/dtpr_chatbot/sensor.html", 
+          sign:["face","hex-icon-face","dtpr_icons/tech/air.svg","dtpr_icons/tech/air.svg"],
+          title:"Save for later",
+          description:"After trying on some items, you decide to purchase one item, save a couple others to a wishlist.",
+          image:"images/Frame_Subject.svg",
+          frame:"images/Frame_Background.png",
+          sign:["dtpr_icons/purpose/water.svg","dtpr_icons/tech/light.svg","hex-icon-room_service","hex-icon-favorite"],
+          features: [ 
+            { title: "The purpose of this system is", icon: "dtpr_icons/purpose/agency.svg", description: "Saving" }, 
+            { title: "The service is provided by", icon: "hex-icon-storefront", description: orgStore }, 
+            { title: "The technology is", icon: "dtpr_icons/tech/blue/video.svg", description: "Computer Vision" }, 
+            { title: "The interaction mode is", icon: "hex-icon-portrait", description: "Magic Mirror" }, 
+            { title: "The relationship is", icon: "hex-icon-card_membership", description: "Customer" },
+          ],
+          index:currentIndex,
+          frame:currentFrame,
+        }) %>
+        <% 
+          currentFrame++;
+        %>
+      </div>
+      <div>
+        <%= require("ejs-loader!./templates/step-holder.ejs")({
+          contentLeft:true,
+          prototypeType:"framer",
+          prototypeUrl:"https://framer.com/share/Step1-ghD2K7KlMUDR3jc4Am7m/UXM1Lab84",
+          
+          title:"Upgrade account",
+          description:"You bag your item, leave the store, and are given the option to create a connection with the local merchant, and change your payment method.",
+          image:"images/Frame_Subject.svg",
+          frame:"images/Frame_Background.png",
+          sign:["dtpr_icons/purpose/water.svg","dtpr_icons/tech/light.svg","hex-icon-room_service","hex-icon-favorite"],
+          features: [ 
+            { title: "The purpose of this system is", icon: "black-icon-shopping_basket", description: "Shopping" }, 
+            { title: "The service is provided by", icon: "hex-icon-storefront", description: orgStore }, 
+            { title: "The technology is", icon: "dtpr_icons/tech/yellow/wave.svg", description: "Contactless payments" }, 
+            { title: "The interaction mode is", icon: "hex-icon-shopping_basket", description: "Grab and go" }, 
+            { title: "The relationship is", icon: "hex-icon-card_membership", description: "Customer" },
+          ],
+          index:currentIndex,
+          frame:currentFrame,
+        }) %>
+        <% 
+          currentFrame++;
+        %>
+      </div>
+      <div class="step-footer">
+        <div class="container">
+          <%= require("ejs-loader!./templates/step-footer.ejs")({ 
+            description: "In this scenario we learned about a standardised way to learn about technologies and make use of shared devices.", 
+            features: [ 
+              { title: "Agency for people", label: "label", icon: "hex-icon-accessibility_new", description: "Publishing place definitons allows people to know what functionality is available in a given place." }, 
+              { title: "Interoperable access", label: "label", icon: "hex-icon-power", description: "Rather than relying on a single app, an interoperable API ensures many channels of access." }, 
+              { title: "Data exchange receipts", label: "label", icon: "hex-icon-receipt", description: "Each personal interaction that is digitally recorded is able to be audited and edited by that person." }, 
+              { title: "Zone-based notice",label: "label", icon: "hex-icon-place", description: "Alerts can be set based on geographic areas and a person’s familiarity with that place." }, 
+            ], 
+          }) %>
+        </div>
+      </div>
+    </div>
+    <!-- / SECTION 2 -->
+
+    <!-- SECTION 3 -->
+    <% 
+      var currentIndex = 2;
+      var currentFrame = 0;
+      var currentStepData = stepData[currentIndex];
+    %>
+    <div id="section-scenario-3" class="step" data-step="section-scenario-3">
+      <div class="sticky-section-header">
+        <%= require("ejs-loader!./templates/section-divider.ejs")({
+          section:"Wayfinding", 
+          title: currentStepData.title, 
+          icon:"number-icon-"+(currentIndex+1),
+        }) %>
+      </div>
+      <div class="step-banner">
+        <div class="container">
+          <%= require("ejs-loader!./templates/step-header.ejs")({ 
+            title: currentStepData.description, 
+            lead: "A standardised way to query information about the places you're in, and the affordances there.", 
+            image:"images/Vision_Chapter_Image_3.svg",
+            stepNumber:currentIndex+1,
+            seal: "Seal_Sensor.png", 
+            buttons: [
+              { title: "titl", label: "Start the journey", classes: "btn-primary" },
+              { title: "titl", label: "Skip to the prototype", classes: "btn-secondary" },
+              { title: "titl", label: "See an example definition", classes: "btn-secondary" },
+            ], 
+            features: [ 
+              { title: "Agency for people", label: "label", icon: "hex-icon-accessibility_new", description: "Publishing place definitons allows people to know what functionality is available in a given place." }, 
+              { title: "Interoperable access", label: "label", icon: "hex-icon-power", description: "Rather than relying on a single app, an interoperable API ensures many channels of access." }, 
+              { title: "Data exchange receipts", label: "label", icon: "hex-icon-receipt", description: "Each personal interaction that is digitally recorded is able to be audited and edited by that person." }, 
+              { title: "Zone-based notice",label: "label", icon: "hex-icon-place", description: "Alerts can be set based on geographic areas and a person’s familiarity with that place." }, 
+            ], 
+          }) %>
+        </div>
+      </div>
+      <div>
+        <%= require("ejs-loader!./templates/step-holder.ejs")({
+          contentLeft:false,
+          prototypeType:"dialogflow",
+          prototypeUrl:"https://dtpr.sidewalklabs.com/dtpr_chatbot/place.html", 
+          sign:["face","hex-icon-face","dtpr_icons/tech/air.svg","dtpr_icons/tech/air.svg"],
+          title:"What's around me?",
+          description:"You hear some music and follow it to the source. A busker is playing a nostalgic tune and you listen for a while.",
+          image:"images/Frame_Subject.svg",
+          frame:"images/Frame_Background.png",
+          sign:["dtpr_icons/purpose/water.svg","dtpr_icons/tech/light.svg","hex-icon-room_service","hex-icon-favorite"],
+          features: [ 
+            { title: "The purpose of this system is", icon: "dtpr_icons/purpose/arts.svg", description: "Arts & Culture" }, 
+            { title: "The service is provided by", icon: "hex-icon-location_city", description: orgNeighbourhood }, 
+            { title: "The technology is", icon: "dtpr_icons/tech/wave.svg", description: "Bluetooth" }, 
+            { title: "The interaction mode is", icon: "hex-icon-directions_walking", description: "Hands free" }, 
+            { title: "The relationship is", icon: "hex-icon-meeting_room", description: "Temporary" },
+          ],
+          index:currentIndex,
+          frame:currentFrame,
+        }) %>
+        <% 
+          currentFrame++;
+        %>
+      </div>
+      <div>
+        <%= require("ejs-loader!./templates/step-holder.ejs")({
+          contentLeft:true,
+          prototypeType:"framer",
+          prototypeUrl:"https://framer.com/share/Step1-ghD2K7KlMUDR3jc4Am7m/UXM1Lab84",
+          
+          title:"Support the artist",
+          description:"Summoning your assistant, you ask to learn more about this busker. You're able to see artist information, and even tip.",
+          image:"images/Frame_Subject.svg",
+          frame:"images/Frame_Background.png",
+          sign:["dtpr_icons/purpose/arts.svg","dtpr_icons/tech/light.svg","hex-icon-room_service","hex-icon-favorite"],
+          features: [ 
+            { title: "The purpose of this system is", icon: "dtpr_icons/purpose/arts.svg", description: "Arts and Culture" }, 
+            { title: "The service is provided by", icon: "hex-icon-music_note", description: "Busker" }, 
+            { title: "The technology is", icon: "dtpr_icons/tech/yellow/wave.svg", description: "Contactless payments" },
+            { title: "The interaction mode is ", icon: "hex-icon-room_service", description: "Personal AI" }, 
+            { title: "The relationship is", icon: "hex-icon-favorite", description: "Supporter" }, 
+          ],
+          index:currentIndex,
+          frame:currentFrame,
+        }) %>
+        <% 
+          currentFrame++;
+        %>
+      </div>
+      <div>
+        <%= require("ejs-loader!./templates/step-holder.ejs")({
+          contentLeft:false,
+          prototypeType:"dialogflow",
+          prototypeUrl:"https://dtpr.sidewalklabs.com/dtpr_chatbot/place.html", 
+          sign:["face","hex-icon-face","dtpr_icons/tech/air.svg","dtpr_icons/tech/air.svg"],
+          title:"What else is here?",
+          description:"The busker is presented on a shared and real-time map of this place. You can see other facilities, businesses, and those who have given you permission.",
+          image:"images/Frame_Subject.svg",
+          frame:"images/Frame_Background.png",
+          sign:["dtpr_icons/purpose/water.svg","dtpr_icons/tech/light.svg","hex-icon-room_service","hex-icon-favorite"],
+          features: [ 
+            { title: "The purpose of this system is", icon: "dtpr_icons/purpose/inform.svg", description: "Inform" }, 
+            { title: "The service is provided by", icon: "hex-icon-location_city", description: orgNeighbourhood },  
+            { title: "The technology is", icon: "dtpr-logo-Black", description: "DTPR API" }, 
+            { title: "The interaction mode is", icon: "hex-icon-smartphone", description: "Personal Device" }, 
+            { title: "The relationship is", icon: "hex-icon-meeting_room", description: "Temporary" },
+          ],
+          index:currentIndex,
+          frame:currentFrame,
+        }) %>
+        <% 
+          currentFrame++;
+        %>
+      </div>
+      <div>
+        <%= require("ejs-loader!./templates/step-holder.ejs")({
+          contentLeft:true,
+          prototypeType:"framer",
+          prototypeUrl:"https://framer.com/share/Step1-ghD2K7KlMUDR3jc4Am7m/UXM1Lab84",
+          
+          title:"Bumping into a friend",
+          description:"You see your friend on the map, who you share your location with. You both decide to grab lunch together.",
+          image:"images/Frame_Subject.svg",
+          frame:"images/Frame_Background.png",
+          sign:["dtpr_icons/purpose/water.svg","dtpr_icons/tech/light.svg","hex-icon-room_service","hex-icon-favorite"],
+          features: [ 
+            { title: "The purpose of this system is", icon: "hex-icon-people", description: "Social" }, 
+            { title: "The service is provided by", icon: "hex-icon-call", description: "Phone Co." },  
+            { title: "The technology is", icon: "hex-icon-gps-not_fixed", description: "GPS" }, 
+            { title: "The user’s interface is ", icon: "hex-icon-room_service", description: "Personal AI" }, 
+            { title: "The relationship is", icon: "hex-icon-favorite", description: "Friends" },
+          ],
+          index:currentIndex,
+          frame:currentFrame,
+        }) %>
+        <% 
+          currentFrame++;
+        %>
+      </div>
+      <div class="step-footer">
+        <div class="container">
+          <%= require("ejs-loader!./templates/step-footer.ejs")({ 
+            description: "In this scenario we learned about a standardised way to describe the systems, sensors, and technologies in a given area.", 
+            features: [ 
+              { title: "Agency for people", label: "label", icon: "hex-icon-accessibility_new", description: "Publishing place definitons allows people to know what functionality is available in a given place." }, 
+              { title: "Interoperable access", label: "label", icon: "hex-icon-power", description: "Rather than relying on a single app, an interoperable API ensures many channels of access." }, 
+              { title: "Data exchange receipts", label: "label", icon: "hex-icon-receipt", description: "Each personal interaction that is digitally recorded is able to be audited and edited by that person." }, 
+              { title: "Zone-based notice",label: "label", icon: "hex-icon-place", description: "Alerts can be set based on geographic areas and a person’s familiarity with that place." }, 
+            ], 
+          }) %>
+        </div>
+      </div>
+    </div>
+    <!-- / SECTION 3 -->
+
+    <!-- SECTION 4 -->
+    <% 
+      var currentIndex = 3;
+      var currentFrame = 0;
+      var currentStepData = stepData[currentIndex];
+    %>
+    <div id="section-scenario-4" class="step" data-step="section-scenario-4">
+      <div class="sticky-section-header">
+        <%= require("ejs-loader!./templates/section-divider.ejs")({
+          section:"Assets", 
+          title: currentStepData.title, 
+          icon:"number-icon-"+(currentIndex+1),
+        }) %>
+      </div>
+      <div class="step-banner">
+        <div class="container">
+          <%= require("ejs-loader!./templates/step-header.ejs")({ 
+            title: currentStepData.description, 
+            lead: "An interoperable way to book, request, and control assets in a shared space.", 
+            image:"images/Vision_Chapter_Image_4.svg",
+            stepNumber:currentIndex+1,
+            seal: "Seal_Place.png", 
+            buttons: [
+              { title: "titl", label: "Start the journey", classes: "btn-primary" },
+              { title: "titl", label: "Skip to the prototype", classes: "btn-secondary" },
+              { title: "titl", label: "See an example definition", classes: "btn-secondary" },
+            ], 
+            features: [ 
+              { title: "Agency for people", label: "label", icon: "hex-icon-accessibility_new", description: "Publishing place definitons allows people to know what functionality is available in a given place." }, 
+              { title: "Interoperable access", label: "label", icon: "hex-icon-power", description: "Rather than relying on a single app, an interoperable API ensures many channels of access." }, 
+              { title: "Data exchange receipts", label: "label", icon: "hex-icon-receipt", description: "Each personal interaction that is digitally recorded is able to be audited and edited by that person." }, 
+              { title: "Zone-based notice",label: "label", icon: "hex-icon-place", description: "Alerts can be set based on geographic areas and a person’s familiarity with that place." }, 
+            ], 
+          }) %>
+        </div>
+      </div>
+      <div>
+        <%= require("ejs-loader!./templates/step-holder.ejs")({
+          contentLeft:false,
+          prototypeType:"dialogflow",
+          prototypeUrl:"https://dtpr.sidewalklabs.com/dtpr_chatbot/place.html", 
+          sign:["face","hex-icon-face","dtpr_icons/tech/air.svg","dtpr_icons/tech/air.svg"],
+          title:"Order ahead",
+          description:"You select a restaurant and your AI makes a menu suggestion. You opt-in to share your purchase data for a discount.",
+          image:"images/Frame_Subject.svg",
+          frame:"images/Frame_Background.png",
+          sign:["dtpr_icons/purpose/water.svg","dtpr_icons/tech/light.svg","hex-icon-room_service","hex-icon-favorite"],
+          features: [ 
+            { title: "The purpose of this system is", icon: "hex-icon-local_atm", description: "Commerce" }, 
+            { title: "The service is provided by", icon: "hex-icon-call", description: "Restaurant Co." },  
+            { title: "The technology is", icon: "dtpr_icons/tech/yellow/wave.svg", description: "Contactless payments" }, 
+            { title: "The user’s interface is ", icon: "hex-icon-room_service", description: "Personal AI" }, 
+            { title: "The relationship is", icon: "hex-icon-card_membership", description: "Customer" },
+          ],
+          index:currentIndex,
+          frame:currentFrame,
+        }) %>
+        <% 
+          currentFrame++;
+        %>
+      </div>
+      <div>
+        <%= require("ejs-loader!./templates/step-holder.ejs")({
+          contentLeft:false,
+          prototypeType:"dialogflow",
+          prototypeUrl:"https://dtpr.sidewalklabs.com/dtpr_chatbot/place.html", 
+          sign:["face","hex-icon-face","dtpr_icons/tech/air.svg","dtpr_icons/tech/air.svg"],
+          title:"See what it sees",
+          description:"On your way, you check the live seating status of the seating area, and choose a table.",
+          image:"images/Frame_Subject.svg",
+          frame:"images/Frame_Background.png",
+          sign:["dtpr_icons/purpose/water.svg","dtpr_icons/tech/light.svg","hex-icon-room_service","hex-icon-favorite"],
+          features: [ 
+            { title: "The purpose of this system is", icon: "dtpr_icons/purpose/inform.svg", description: "Inform" }, 
+            { title: "The service is provided by", icon: "hex-icon-location_city", description: orgNeighbourhood },  
+            { title: "The technology is", icon: "dtpr-logo-Black", description: "DTPR API" }, 
+            { title: "The interaction mode is", icon: "hex-icon-smartphone", description: "Personal Device" }, 
+            { title: "The relationship is", icon: "hex-icon-meeting_room", description: "Temporary" },
+          ],
+          index:currentIndex,
+          frame:currentFrame,
+        }) %>
+        <% 
+          currentFrame++;
+        %>
+      </div><div>
+        <%= require("ejs-loader!./templates/step-holder.ejs")({
+          contentLeft:true,
+          prototypeType:"framer",
+          prototypeUrl:"https://framer.com/share/Step1-ghD2K7KlMUDR3jc4Am7m/UXM1Lab84",
+          
+          title:"This way to your table",
+          description:"You get directions to your table and begin your stroll.",
+          image:"images/Frame_Subject.svg",
+          frame:"images/Frame_Background.png",
+          sign:["dtpr_icons/purpose/water.svg","dtpr_icons/tech/light.svg","hex-icon-room_service","hex-icon-favorite"],
+          features: [ 
+            { title: "The purpose of this system is", icon: "dtpr_icons/purpose/mobility.svg", description: "Mobility" }, 
+            { title: "The service is provided by", icon: "hex-icon-location_city", description: orgNeighbourhood },  
+            { title: "The technology is", icon: "dtpr_icons/tech/wave.svg", description: "GPS" }, 
+            { title: "The interaction mode is", icon: "hex-icon-smartphone", description: "Personal Device" }, 
+            { title: "The relationship is", icon: "hex-icon-meeting_room", description: "Temporary" },
+          ],
+          index:currentIndex,
+          frame:currentFrame,
+        }) %>
+        <% 
+          currentFrame++;
+        %>
+      </div>
+      <div>
+        <%= require("ejs-loader!./templates/step-holder.ejs")({
+          contentLeft:true,
+          prototypeType:"framer",
+          prototypeUrl:"https://framer.com/share/Step1-ghD2K7KlMUDR3jc4Am7m/UXM1Lab84",
+          
+          title:"Food is ready",
+          description:"After catching up with your friend, the food arrives. You have a quick chat with the server, thank them, and chow down.",
+          image:"images/Frame_Subject.svg",
+          frame:"images/Frame_Background.png",
+          sign:["dtpr_icons/purpose/water.svg","dtpr_icons/tech/light.svg","hex-icon-room_service","hex-icon-favorite"],
+          features: [ 
+            { title: "The purpose of this system is", icon: "hex-icon-local_atm", description: "Commerce" }, 
+            { title: "The service is provided by", icon: "hex-icon-call", description: "Restaurant Co." },              
+            { title: "The technology is", icon: "dtpr_icons/tech/yellow/wave.svg", description: "Identifiable NFC" }, 
+            { title: "The interaction mode is", icon: "hex-icon-directions_walking", description: "Hands free" }, 
+            { title: "The relationship is", icon: "hex-icon-favorite", description: "Customer" }, 
+          ],
+          index:currentIndex,
+          frame:currentFrame,
+        }) %>
+        <% 
+          currentFrame++;
+        %>
+      </div>
+      <div class="step-footer">
+        <div class="container">
+          <%= require("ejs-loader!./templates/step-footer.ejs")({ 
+            description: "In this scenario we learned about how a standardised way to interact with systems can enable us to use and navigate an location seamlessly.", 
+            features: [ 
+              { title: "Agency for people", label: "label", icon: "hex-icon-accessibility_new", description: "Publishing place definitons allows people to know what functionality is available in a given place." }, 
+              { title: "Interoperable access", label: "label", icon: "hex-icon-power", description: "Rather than relying on a single app, an interoperable API ensures many channels of access." }, 
+              { title: "Data exchange receipts", label: "label", icon: "hex-icon-receipt", description: "Each personal interaction that is digitally recorded is able to be audited and edited by that person." }, 
+              { title: "Zone-based notice",label: "label", icon: "hex-icon-place", description: "Alerts can be set based on geographic areas and a person’s familiarity with that place." }, 
+            ], 
+          }) %>
+        </div>
+      </div>
+    </div>
+    <!-- / SECTION 4 -->
+
+    <!-- SECTION 5 -->
+    <% 
+      var currentIndex = 4;
+      var currentFrame = 0;
+      var currentStepData = stepData[currentIndex];
+    %>
+    <div id="section-scenario-5" class="step" data-step="section-scenario-5">
+      <div class="sticky-section-header">
+        <%= require("ejs-loader!./templates/section-divider.ejs")({
+          section:"Systems", 
+          title: currentStepData.title, 
+          icon:"number-icon-"+(currentIndex+1),
+        }) %>
+      </div>
+      <div class="step-banner">
+        <div class="container">
+          <%= require("ejs-loader!./templates/step-header.ejs")({ 
+            title: currentStepData.description, 
+            lead: "A standard way to describe systems within places, and what sensors, processing, and purposes they serve.", 
+            image:"images/Vision_Chapter_Image_5.svg",
+            stepNumber:currentIndex+1,
+            seal: "Seal_System.png", 
+            buttons: [
+              { title: "titl", label: "Start the journey", classes: "btn-primary" },
+              { title: "titl", label: "Skip to the prototype", classes: "btn-secondary" },
+              { title: "titl", label: "See an example definition", classes: "btn-secondary" },
+            ], 
+            features: [ 
+              { title: "Agency for people", label: "label", icon: "hex-icon-accessibility_new", description: "Publishing place definitons allows people to know what functionality is available in a given place." }, 
+              { title: "Interoperable access", label: "label", icon: "hex-icon-power", description: "Rather than relying on a single app, an interoperable API ensures many channels of access." }, 
+              { title: "Data exchange receipts", label: "label", icon: "hex-icon-receipt", description: "Each personal interaction that is digitally recorded is able to be audited and edited by that person." }, 
+              { title: "Zone-based notice",label: "label", icon: "hex-icon-place", description: "Alerts can be set based on geographic areas and a person’s familiarity with that place." }, 
+            ], 
+          }) %>
+        </div>
+      </div>
+      <div>
+        <%= require("ejs-loader!./templates/step-holder.ejs")({
+          contentLeft:false,
+          prototypeType:"dialogflow",
+          prototypeUrl:"https://dtpr.sidewalklabs.com/dtpr_chatbot/system.html", 
+          sign:["face","hex-icon-face","dtpr_icons/tech/air.svg","dtpr_icons/tech/air.svg"],
+          title:"Right things in the right place",
+          description:"You get guidance from the waste bin. The compost and the recyclables are placed in the correct bins.",
+          image:"images/Frame_Subject.svg",
+          frame:"images/Frame_Background.png",
+          sign:["dtpr_icons/purpose/water.svg","dtpr_icons/tech/light.svg","hex-icon-room_service","hex-icon-favorite"],
+          features: [ 
+            { title: "The purpose of this system is", icon: "dtpr_icons/purpose/waste.svg", description: "Waste Management" }, 
+            { title: "The service is provided by", icon: "hex-icon-location_city", description: orgNeighbourhood },  
+            { title: "The technology is", icon: "dtpr_icons/tech/video.svg", description: "Computer Vision" }, 
+            { title: "The interaction mode is ", icon: "hex-icon-room_service", description: "System Screen" }, 
+            { title: "The relationship is", icon: "hex-icon-meeting_room", description: "Temporary" },
+          ],
+          index:currentIndex,
+          frame:currentFrame,
+        }) %>
+        <% 
+          currentFrame++;
+        %>
+      </div>
+      <div>
+        <%= require("ejs-loader!./templates/step-holder.ejs")({
+          contentLeft:true,
+          prototypeType:"framer",
+          prototypeUrl:"https://framer.com/share/Step1-ghD2K7KlMUDR3jc4Am7m/UXM1Lab84",
+          
+          title:"Ways to help",
+          description:"You find out about actions you can take to help the neighbourhood achieve sustainability goals. You opt-in to sharing your anonymous location data.",
+          image:"images/Frame_Subject.svg",
+          frame:"images/Frame_Background.png",
+          sign:["dtpr_icons/purpose/water.svg","dtpr_icons/tech/light.svg","hex-icon-room_service","hex-icon-favorite"],
+          features: [ 
+            { title: "The purpose of this system is", icon: "dtpr_icons/purpose/energy.svg", description: "Energy Efficiency" }, 
+            { title: "The service is provided by", icon: "hex-icon-location_city", description: orgNeighbourhood },  
+            { title: "The technology is", icon: "hex-icon-gps_not_fixed", description: "De-identified GPS" }, 
+            <!-- TODO make this GPS icon blue -->
+            { title: "The interaction mode is", icon: "hex-icon-room_service", description: "Personal AI" }, 
+            { title: "The relationship is", icon: "hex-icon-meeting_room", description: "Anonymous" },
+          ],
+          index:currentIndex,
+          frame:currentFrame,
+        }) %>
+        <% 
+          currentFrame++;
+        %>
+      </div>
+      <!-- TODO: Put in numina sensor prototype -->
+      <div>
+        <%= require("ejs-loader!./templates/step-holder.ejs")({
+          contentLeft:false,
+          prototypeType:"dialogflow",
+          prototypeUrl:"https://dtpr.sidewalklabs.com/dtpr_chatbot/place.html", 
+          sign:["face","hex-icon-face","dtpr_icons/tech/air.svg","dtpr_icons/tech/air.svg"],
+          title:"Learn about the system",
+          description:"You can learn more about all the systems in this place or save it for later reading.",
+          image:"images/Frame_Subject.svg",
+          frame:"images/Frame_Background.png",
+          sign:["dtpr_icons/purpose/water.svg","dtpr_icons/tech/light.svg","hex-icon-room_service","hex-icon-favorite"],
+          features: [ 
+            { title: "The purpose of this system is", icon: "dtpr_icons/purpose/inform.svg", description: "Inform" }, 
+            { title: "The service is provided by", icon: "hex-icon-location_city", description: orgNeighbourhood },  
+            { title: "The technology is", icon: "dtpr-logo-Black", description: "DTPR API" }, 
+            { title: "The interaction mode is", icon: "hex-icon-room_service", description: "Personal AI" }, 
+            { title: "The relationship is", icon: "hex-icon-favorite", description: "Temporary" },
+          ],
+          index:currentIndex,
+          frame:currentFrame,
+        }) %>
+        <% 
+          currentFrame++;
+        %>
+      </div>
+      <div>
+        <%= require("ejs-loader!./templates/step-holder.ejs")({
+          contentLeft:true,
+          prototypeType:"framer",
+          prototypeUrl:"https://framer.com/share/Step1-ghD2K7KlMUDR3jc4Am7m/UXM1Lab84",
+          
+          title:"Occupancy sensor",
+          description:"You want to learn more about the occupancy sensor, you are able to ask questions about how it works, and why its important.",
+          image:"images/Frame_Subject.svg",
+          frame:"images/Frame_Background.png",
+          sign:["dtpr_icons/purpose/water.svg","dtpr_icons/tech/light.svg","hex-icon-room_service","hex-icon-favorite"],
+          features: [ 
+            { title: "The purpose of this system is", icon: "dtpr_icons/purpose/energy.svg", description: "Energy Efficiency" }, 
+            { title: "The service is provided by", icon: "hex-icon-location_city", description: orgNeighbourhood },  
+            { title: "The technology is", icon: "dtpr_icons/tech/light.svg", description: "Infrared sensor" }, 
+            { title: "The interaction mode is ", icon: "hex-icon-forum", description: "System chatbot" }, 
+            { title: "The relationship is", icon: "hex-icon-meeting_room", description: "Temporary" },
+          ],
+          index:currentIndex,
+          frame:currentFrame,
+        }) %>
+        <% 
+          currentFrame++;
+        %>
+      </div>
+      <div class="step-footer">
+        <div class="container">
+          <%= require("ejs-loader!./templates/step-footer.ejs")({ 
+            description: "In this scenario we learned about how a standardised taxonomy to describe systems can enable us to better understand, use and engage with the environment around us.", 
+            features: [ 
+              { title: "Agency for people", label: "label", icon: "hex-icon-accessibility_new", description: "Publishing place definitons allows people to know what functionality is available in a given place." }, 
+              { title: "Interoperable access", label: "label", icon: "hex-icon-power", description: "Rather than relying on a single app, an interoperable API ensures many channels of access." }, 
+              { title: "Data exchange receipts", label: "label", icon: "hex-icon-receipt", description: "Each personal interaction that is digitally recorded is able to be audited and edited by that person." }, 
+              { title: "Zone-based notice",label: "label", icon: "hex-icon-place", description: "Alerts can be set based on geographic areas and a person’s familiarity with that place." }, 
+            ], 
+          }) %>
+        </div>
+      </div>
+    </div>
+    <!-- / SECTION 5 -->
+
+    <!-- SECTION 6 -->
+    <% 
+      var currentIndex = 5;
+      var currentFrame = 0;
+      var currentStepData = stepData[currentIndex];
+    %>
+    <div id="section-scenario-6" class="step" data-step="section-scenario-6">
+      <div class="sticky-section-header">
+        <%= require("ejs-loader!./templates/section-divider.ejs")({
+          section:"Encryption", 
+          title: currentStepData.title, 
+          icon:"number-icon-"+(currentIndex+1),
+        }) %>
+      </div>
+      <div class="step-banner">
+        <div class="container">
+          <%= require("ejs-loader!./templates/step-header.ejs")({ 
+            title: currentStepData.description, 
+            lead: "New methods in preserving privacy while maintaining a way to comply with security operations.", 
+            image:"images/Vision_Chapter_Image_6.svg",
+            stepNumber:currentIndex+1,
+            seal: "Seal_Sensor.png", 
+            buttons: [
+              { title: "titl", label: "Start the journey", classes: "btn-primary" },
+              { title: "titl", label: "Skip to the prototype", classes: "btn-secondary" },
+              { title: "titl", label: "See an example definition", classes: "btn-secondary" },
+            ], 
+            features: [ 
+              { title: "Agency for people", label: "label", icon: "hex-icon-accessibility_new", description: "Publishing place definitons allows people to know what functionality is available in a given place." }, 
+              { title: "Interoperable access", label: "label", icon: "hex-icon-power", description: "Rather than relying on a single app, an interoperable API ensures many channels of access." }, 
+              { title: "Data exchange receipts", label: "label", icon: "hex-icon-receipt", description: "Each personal interaction that is digitally recorded is able to be audited and edited by that person." }, 
+              { title: "Zone-based notice",label: "label", icon: "hex-icon-place", description: "Alerts can be set based on geographic areas and a person’s familiarity with that place." }, 
+            ], 
+          }) %>
+        </div>
+      </div>
+      <div>
+        <%= require("ejs-loader!./templates/step-holder.ejs")({
+          contentLeft:false,
+          prototypeType:"dialogflow",
+          prototypeUrl:"https://dtpr.sidewalklabs.com/dtpr_chatbot/place.html", 
+          sign:["face","hex-icon-face","dtpr_icons/tech/air.svg","dtpr_icons/tech/air.svg"],
+          title:"You've lost your bag",
+          description:"You quickly head to a wall assistant and gesture to contact security.",
+          image:"images/Frame_Subject.svg",
+          frame:"images/Frame_Background.png",
+          sign:["dtpr_icons/purpose/water.svg","dtpr_icons/tech/light.svg","hex-icon-room_service","hex-icon-favorite"],
+          features: [ 
+            { title: "The purpose of this system is", icon: "dtpr_icons/purpose/security.svg", description: "Safety and Security" }, 
+            { title: "The service is provided by", icon: "hex-icon-location_city", description: orgNeighbourhood },  
+            { title: "The technology is", icon: "dtpr_icons/tech/voice.svg", description: "Intercom" }, 
+            { title: "The interaction mode is", icon: "hex-icon-forum", description: "System chatbot" },             
+            { title: "The relationship is", icon: "hex-icon-meeting_room", description: "Temporary" }, 
+          ],
+          index:currentIndex,
+          frame:currentFrame,
+        }) %>
+        <% 
+          currentFrame++;
+        %>
+      </div>
+      <div>
+        <%= require("ejs-loader!./templates/step-holder.ejs")({
+          contentLeft:true,
+          prototypeType:"framer",
+          prototypeUrl:"https://framer.com/share/Step1-ghD2K7KlMUDR3jc4Am7m/UXM1Lab84",
+          
+          title:"Decrypt when required",
+          description:"The security agent understands, and offers to decrypt based on 2 factor authentication using your location data.",
+          image:"images/Frame_Subject.svg",
+          frame:"images/Frame_Background.png",
+          sign:["dtpr_icons/purpose/water.svg","dtpr_icons/tech/light.svg","hex-icon-room_service","hex-icon-favorite"],
+          features: [ 
+            { title: "The purpose of this system is", icon: "dtpr_icons/purpose/security.svg", description: "Safety and Security" }, 
+            { title: "The service is provided by", icon: "hex-icon-location_city", description: orgNeighbourhood },  
+            { title: "The technology is", icon: "dtpr_icons/tech/yellow/video.svg", description: "Computer vision" }, 
+            { title: "The interaction mode is ", icon: "hex-icon-room_service", description: "Personal AI" },             
+            { title: "The relationship is", icon: "hex-icon-verified_user", description: "Secure and authenticated" }, 
+          ],
+          index:currentIndex,
+          frame:currentFrame,
+        }) %>
+        <% 
+          currentFrame++;
+        %>
+      </div>
+      <div>
+        <%= require("ejs-loader!./templates/step-holder.ejs")({
+          contentLeft:false,
+          prototypeType:"dialogflow",
+          prototypeUrl:"https://dtpr.sidewalklabs.com/dtpr_chatbot/place.html", 
+          sign:["face","hex-icon-face","dtpr_icons/tech/air.svg","dtpr_icons/tech/air.svg"],
+          title:"Trace your steps",
+          description:"The security helps you trace your steps back to the food court, and monitors your bag until you retrieve it.",
+          image:"images/Frame_Subject.svg",
+          frame:"images/Frame_Background.png",
+          sign:["dtpr_icons/purpose/water.svg","dtpr_icons/tech/light.svg","hex-icon-room_service","hex-icon-favorite"],
+          features: [ 
+            { title: "The purpose of this system is", icon: "dtpr_icons/purpose/security.svg", description: "Safety and Security" }, 
+            { title: "The service is provided by", icon: "hex-icon-location_city", description: orgNeighbourhood },  
+            { title: "The technology is", icon: "dtpr_icons/tech/yellow/video.svg", description: "Computer vision" }, 
+            { title: "The interaction mode is", icon: "hex-icon-forum", description: "System chatbot" },             
+            { title: "The relationship is", icon: "hex-icon-verified_user", description: "Secure and authenticated" }, 
+          ],
+          index:currentIndex,
+          frame:currentFrame,
+        }) %>
+        <% 
+          currentFrame++;
+        %>
+      </div>
+      <div>
+        <%= require("ejs-loader!./templates/step-holder.ejs")({
+          contentLeft:true,
+          prototypeType:"framer",
+          prototypeUrl:"https://framer.com/share/Step1-ghD2K7KlMUDR3jc4Am7m/UXM1Lab84",
+          
+          title:"On your way",
+          description:"After getting your bag back, you unlock 2 bikes, one for your friend, and head home together.",
+          image:"images/Frame_Subject.svg",
+          frame:"images/Frame_Background.png",
+          sign:["dtpr_icons/purpose/water.svg","dtpr_icons/tech/light.svg","hex-icon-room_service","hex-icon-favorite"],
+          features: [ 
+            { title: "The purpose of this system is", icon: "dtpr_icons/purpose/mobility.svg", description: "Mobility" }, 
+            { title: "The service is provided by", icon: "dtpr_icons/tech/light.svg", description: orgBike }, 
+            { title: "The technology is", icon: "dtpr_icons/tech/yellow/wave.svg", description: "Bikeshare ID" }, 
+            { title: "The interaction mode is", icon: "hex-icon-directions_walking", description: "Hands free" },
+            { title: "The relationship is", icon: "hex-icon-favorite", description: "Membership" }, 
+          ],
+          index:currentIndex,
+          frame:currentFrame,
+        }) %>
+        <% 
+          currentFrame++;
+        %>
+      </div>
+      <div class="step-footer">
+        <div class="container">
+          <%= require("ejs-loader!./templates/step-footer.ejs")({ 
+            description: "In this scenario we learned about how a standardised way to interact with systems can enable us to access data streams to support different needs - securely.", 
+            features: [ 
+              { title: "Agency for people", label: "label", icon: "hex-icon-accessibility_new", description: "Publishing place definitons allows people to know what functionality is available in a given place." }, 
+              { title: "Interoperable access", label: "label", icon: "hex-icon-power", description: "Rather than relying on a single app, an interoperable API ensures many channels of access." }, 
+              { title: "Data exchange receipts", label: "label", icon: "hex-icon-receipt", description: "Each personal interaction that is digitally recorded is able to be audited and edited by that person." }, 
+              { title: "Zone-based notice",label: "label", icon: "hex-icon-place", description: "Alerts can be set based on geographic areas and a person’s familiarity with that place." }, 
+            ], 
+          }) %>
+        </div>
+      </div>
+    </div>
+    <!-- / SECTION 6 -->
+
+    <!-- SECTION 7 -->
+    <% 
+      var currentIndex = 6;
+      var currentFrame = 0;
+      var currentStepData = stepData[currentIndex];
+    %>
+    <div id="section-scenario-7" class="step" data-step="section-scenario-7">
+      <div class="sticky-section-header">
+        <%= require("ejs-loader!./templates/section-divider.ejs")({
+          section:"Review", 
+          title: currentStepData.title, 
+          icon:"number-icon-"+(currentIndex+1),
+        }) %>
+      </div>
+      <div class="step-banner">
+        <div class="container">
+          <%= require("ejs-loader!./templates/step-header.ejs")({ 
+            title: currentStepData.description, 
+            lead: "A standard way for people to review their data footprint, delete transactions, and save other for later.", 
+            image:"images/Vision_Chapter_Image_7.svg",
+            stepNumber:currentIndex+1,
+            seal: "Seal_Sensor.png", 
+            buttons: [
+              { title: "titl", label: "Start the journey", classes: "btn-primary" },
+              { title: "titl", label: "Skip to the prototype", classes: "btn-secondary" },
+              { title: "titl", label: "See an example definition", classes: "btn-secondary" },
+            ], 
+            features: [ 
+              { title: "Agency for people", label: "label", icon: "hex-icon-accessibility_new", description: "Publishing place definitons allows people to know what functionality is available in a given place." }, 
+              { title: "Interoperable access", label: "label", icon: "hex-icon-power", description: "Rather than relying on a single app, an interoperable API ensures many channels of access." }, 
+              { title: "Data exchange receipts", label: "label", icon: "hex-icon-receipt", description: "Each personal interaction that is digitally recorded is able to be audited and edited by that person." }, 
+              { title: "Zone-based notice",label: "label", icon: "hex-icon-place", description: "Alerts can be set based on geographic areas and a person’s familiarity with that place." }, 
+            ], 
+          }) %>
+        </div>
+      </div>
+      <div>
+        <%= require("ejs-loader!./templates/step-holder.ejs")({
+          contentLeft:false,
+          prototypeType:"dialogflow",
+          prototypeUrl:"https://dtpr.sidewalklabs.com/dtpr_chatbot/place.html", 
+          sign:["face","hex-icon-face","dtpr_icons/tech/air.svg","dtpr_icons/tech/air.svg"],
+          title:"Cycle the green wave",
+          description:"As you wait at a light, you opt into the green wave for this journey. This considers your journey in light changes.",
+          image:"images/Frame_Subject.svg",
+          frame:"images/Frame_Background.png",
+          sign:["dtpr_icons/purpose/water.svg","dtpr_icons/tech/light.svg","hex-icon-room_service","hex-icon-favorite"],
+          features: [ 
+            { title: "The purpose of this system is", icon: "dtpr_icons/purpose/mobility.svg", description: "Mobility" }, 
+            { title: "The service is provided by", icon: "hex-icon-add_road", description: orgGov }, 
+            { title: "The technology is", icon: "dtpr_icons/tech/light.svg", description: "Radar" }, 
+            { title: "The interaction mode is", icon: "hex-icon-directions_bike", description: "Bicycling" },
+            { title: "The relationship is", icon: "hex-icon-meeting_room", description: "Temporary" }, 
+          ],
+          index:currentIndex,
+          frame:currentFrame,
+        }) %>
+        <% 
+          currentFrame++;
+        %>
+      </div>
+      <div>
+        <%= require("ejs-loader!./templates/step-holder.ejs")({
+          contentLeft:true,
+          prototypeType:"framer",
+          prototypeUrl:"https://framer.com/share/Step1-ghD2K7KlMUDR3jc4Am7m/UXM1Lab84",
+          
+          title:"Unlock door",
+          description:"You unlock your door with your Personal AI, and your friend can see your home data policies.",
+          image:"images/Frame_Subject.svg",
+          frame:"images/Frame_Background.png",
+          sign:["dtpr_icons/purpose/water.svg","dtpr_icons/tech/light.svg","hex-icon-room_service","hex-icon-favorite"],
+          features: [ 
+            { title: "The purpose of this system is", icon: "dtpr_icons/purpose/agency.svg", description: "Agency" }, 
+            { title: "The service is provided by", icon: "hex-icon-home", description: "Your Home" }, 
+            { title: "The technology is", icon: "dtpr-logo-Black", description: "DTPR API" }, 
+            { title: "The interaction mode is ", icon: "hex-icon-room_service", description: "Personal AI" }, 
+            { title: "The relationship is", icon: "hex-icon-verified_user", description: "Secure and authenticated" },  
+          ],
+          index:currentIndex,
+          frame:currentFrame,
+        }) %>
+        <% 
+          currentFrame++;
+        %>
+      </div>
+      <div>
+        <%= require("ejs-loader!./templates/step-holder.ejs")({
+          contentLeft:false,
+          prototypeType:"dialogflow",
+          prototypeUrl:"https://dtpr.sidewalklabs.com/dtpr_chatbot/place.html", 
+          sign:["face","hex-icon-face","dtpr_icons/tech/air.svg","dtpr_icons/tech/air.svg"],
+          title:"Review transactions from the day",
+          description:"Looking back, you're able to see the digital interactions you had throughout the day. You can edit them, delete some, and set future preferences.",
+          image:"images/Frame_Subject.svg",
+          frame:"images/Frame_Background.png",
+          sign:["dtpr_icons/purpose/water.svg","dtpr_icons/tech/light.svg","hex-icon-room_service","hex-icon-favorite"],
+          features: [ 
+            { title: "The purpose of this system is", icon: "dtpr_icons/purpose/agency.svg", description: "Agency" }, 
+            { title: "The service is provided by", icon: "hex-icon-room_service", description: "Personal AI"  }, 
+            { title: "The technology is", icon: "dtpr-logo-Black", description: "DTPR API" }, 
+            { title: "The interaction mode is ", icon: "hex-icon-room_service", description: "Personal AI" }, 
+            { title: "The relationship is", icon: "hex-icon-verified_user", description: "Secure and authenticated" },
+          ],
+          index:currentIndex,
+          frame:currentFrame,
+        }) %>
+        <% 
+          currentFrame++;
+        %>
+      </div>
+      <div>
+        <%= require("ejs-loader!./templates/step-holder.ejs")({
+          contentLeft:true,
+          prototypeType:"framer",
+          prototypeUrl:"https://framer.com/share/Step1-ghD2K7KlMUDR3jc4Am7m/UXM1Lab84",
+          
+          title:"Feedback",
+          description:"You choose to share the busker you saw with a friend.",
+          image:"images/Frame_Subject.svg",
+          frame:"images/Frame_Background.png",
+          sign:["dtpr_icons/purpose/water.svg","dtpr_icons/tech/light.svg","hex-icon-room_service","hex-icon-favorite"],
+          features: [ 
+            { title: "The purpose of this system is", icon: "dtpr_icons/purpose/inform.svg", description: "Inform" }, 
+            { title: "The service is provided by", icon: "hex-icon-room_service", description: "Personal AI"  }, 
+            { title: "The technology is", icon: "hex-icon-sms", description: "SMS" }, 
+            { title: "The interaction mode is ", icon: "hex-icon-room_service", description: "Personal AI" }, 
+            { title: "The relationship is", icon: "hex-icon-favorite", description: "Friend" }, 
+          ],
+          index:currentIndex,
+          frame:currentFrame,
+        }) %>
+        <% 
+          currentFrame++;
+        %>
+      </div>
+      <div class="step-footer">
+        <div class="container">
+          <%= require("ejs-loader!./templates/step-footer.ejs")({ 
+            description: "In this scenario we learned about how a standardised way to interact with systems can enable choices and agency over digital systems - no matter where you are.", 
+            features: [ 
+              { title: "Agency for people", label: "label", icon: "hex-icon-accessibility_new", description: "Publishing place definitons allows people to know what functionality is available in a given place." }, 
+              { title: "Interoperable access", label: "label", icon: "hex-icon-power", description: "Rather than relying on a single app, an interoperable API ensures many channels of access." }, 
+              { title: "Data exchange receipts", label: "label", icon: "hex-icon-receipt", description: "Each personal interaction that is digitally recorded is able to be audited and edited by that person." }, 
+              { title: "Zone-based notice",label: "label", icon: "hex-icon-place", description: "Alerts can be set based on geographic areas and a person’s familiarity with that place." }, 
+            ], 
+          }) %>
+        </div>
+      </div>
+    </div>
+    <!-- / SECTION 7 -->
+
+    <div id="section-footer" class="step" data-step="section-footer">
+      <div class="sticky-section-header">
+        <%=
+        require("ejs-loader!./templates/section-divider.ejs")({
+          section:"Summary",
+          title: "DTPR",
+          icon:"dtpr-logo-Blue",
+        }) %>
+      </div>
+      <!-- <div class="sticky-section-header">
+        <%= require("ejs-loader!./templates/header.ejs")({}) %>
+      </div> -->
+      <div class="section-image" style="background-image: url(images/Intro_header.svg);">
+        <img src="images/Intro_header.svg" />
+      </div>
+      <div class="container">
+        <div class="row mt-4">
+          <div class="col-12 col-md-9 mt-2">
+            <h3>Background</h3>
+            <h2 style="color:black;">The open-source Digital Transparency in the Public Realm project was led by Helpful Places’ co-founders during their tenure at Sidewalk Labs, and is currently stewarded by an emerging coalition of partners including <a href="https://digitalpublicsquare.org/">Digital Public Square</a> and the <a href="https://www.boston.gov/departments/new-urban-mechanics/digital-transparency-public-realm">City of Boston’s Office of New Urban Mechanics</a>. The project is actively seeking new collaborators  — from stewards to pilot opportunities and implementers, to funders and service providers – to help us test, improve, and advance adoption of the open source standard. </h2> 
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+
+  </body>
+</html>
