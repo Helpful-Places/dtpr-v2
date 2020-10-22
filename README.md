@@ -1,6 +1,6 @@
 # Digital Trust for Places and Routines
 
-[Digital Trust for Places and Routines](https://dtpr.helpfulplaces.com/) is an open-source communication standard for digital technology that enables agency for people in the real world. We believe that by first enabling transparency and understanding, we can increase accountability and human agency so that there can be trust in digital technology.
+[Digital Trust for Places and Routines](https://dtpr.helpfulplaces.com/) is a project that seeks to advance an open-source communication standard for digital technology that enables agency for people in the real world. We believe that by first enabling transparency and understanding, we can increase accountability and human agency so that there can be trust in digital technology.
 
 For an overview of the open-source communication standard, and our five year vision of what could be possible if DTPR is widely adopted, see our website at [dtpr.helpfulplaces.com](https://dtpr.helpfulplaces.com)
 
@@ -29,7 +29,7 @@ The taxonomy is the full set of definitions on which the icons are based. These 
 
 ### Prototype for the Digital Channel
 
-When you scan a QR code on a sign, it brings you to a webpage where you get more information. You can see the [V1 prototype for the digital channel](https://dtpr.sidewalklabs.com/dtpr_prototype) - it’s set up for 307, Sidewalk Labs’ Toronto office and experimental workspace. Here’s the [V1 source code](https://github.com/sidewalklabs/dtpr/tree/master/dtpr_prototype).
+When you scan a QR code on a sign, it brings you to a webpage where you get more information. Here's the [V1 prototype for the digital channel](https://dtpr.sidewalklabs.com/dtpr_prototype). Here’s the [V1 source code](https://github.com/sidewalklabs/dtpr/tree/master/dtpr_prototype).
 
 ## Co-Design Kit
 
