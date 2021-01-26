@@ -29,7 +29,7 @@ The taxonomy is the full set of definitions on which the icons are based. These 
 
 ### Prototype for the Digital Channel
 
-When you scan a QR code on a sign, it brings you to a webpage where you get more information. Here's the [V1 prototype for the digital channel](https://dtpr.sidewalklabs.com/dtpr_prototype). Here’s the [V1 source code](https://github.com/sidewalklabs/dtpr/tree/master/dtpr_prototype).
+When you scan a QR code on a sign, it brings you to a webpage where you get more information. Here's the current [prototype for the digital channel](https://dtpr.helpfulplaces.com/dtpr_prototype/index.html). Here’s the [source code](https://github.com/Helpful-Places/dtpr/tree/master/dtpr_prototype).
 
 ## Co-Design Kit
 
